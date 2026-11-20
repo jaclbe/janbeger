@@ -1,0 +1,3243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<title>2035: The Job Description of a Diagnostic Radiologist</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png" />
+<link rel="apple-touch-icon" sizes="256x256" href="assets/favicon-256.png" />
+<meta name="description" content="Three versions of the diagnostic radiologist's job description for 2035, from two radiologists and one health-tech expert with 20+ years in medical imaging IT. Answer five questions, see the one that matches your outlook." />
+<link rel="canonical" href="https://janbeger.ai/radiologist-2035/" />
+<meta property="og:title" content="2035: The Job Description of a Diagnostic Radiologist" />
+<meta property="og:description" content="Three versions, three vantage points. A five-question test routes you to the future you believe in." />
+<meta property="og:url" content="https://janbeger.ai/radiologist-2035/" />
+<meta property="og:image" content="https://janbeger.ai/radiologist-2035/assets/og-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Plausible analytics: outbound-link tracking + tagged-event custom events.
+     Lives under janbeger.ai so traffic blends with the main site. -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2035: The Job Description of a Diagnostic Radiologist",
+  "alternativeHeadline": "Diagnostic Radiologist Job Description, 2035, in Three Versions",
+  "description": "Three versions of the diagnostic radiologist's job description for 2035, by Dr. med. Amine Korchi, Jan Beger, and Dr. med. Christoph Agten.",
+  "datePublished": "2026-05-18",
+  "dateModified": "2026-09-03",
+  "inLanguage": "en",
+  "image": "https://janbeger.ai/radiologist-2035/assets/og-card.png",
+  "url": "https://janbeger.ai/radiologist-2035/",
+  "about": [
+    "diagnostic radiology",
+    "artificial intelligence",
+    "clinical workflow",
+    "radiology workforce"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Dr. med. Amine Korchi",
+      "jobTitle": "Radiologist and Neuroradiologist",
+      "sameAs": "https://www.linkedin.com/in/dr-amine-korchi-35485113/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://janbeger.ai/#jan",
+      "name": "Jan Beger",
+      "url": "https://janbeger.ai/",
+      "jobTitle": "Global Head of AI Advocacy, GE HealthCare",
+      "sameAs": [
+        "https://www.linkedin.com/in/janbeger",
+        "https://research.gehealthcare.com/about/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. med. Christoph Agten",
+      "jobTitle": "Consultant Radiologist, Musculoskeletal (MSK)",
+      "sameAs": "https://www.linkedin.com/in/cagten/"
+    }
+  ],
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "name": "Three futures for the diagnostic radiologist: A structured disagreement about what AI actually changes",
+    "author": [
+      { "@type": "Person", "name": "Jan Beger" },
+      { "@type": "Person", "name": "Amine Korchi" },
+      { "@type": "Person", "name": "Christoph A. Agten" }
+    ],
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "European Journal of Radiology Artificial Intelligence"
+    },
+    "volumeNumber": "7",
+    "pageStart": "100118",
+    "datePublished": "2026-07-30",
+    "identifier": "10.1016/j.ejrai.2026.100118",
+    "sameAs": "https://doi.org/10.1016/j.ejrai.2026.100118",
+    "url": "https://doi.org/10.1016/j.ejrai.2026.100118",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  },
+  "publisher": { "@id": "https://janbeger.ai/#jan" },
+  "mainEntityOfPage": "https://janbeger.ai/radiologist-2035/"
+}
+</script>
+
+
+<link rel="stylesheet" href="/assets/fonts/r2035-fonts.css" />
+<style>
+  :root{
+    --bg:     #F4F2EE;
+    --bg-2:   #FFFFFF;
+    --ink:    #1B1B1B;
+    --ink-2:  #5E5E5E;
+    --ink-3:  #8C8C8C;
+    --rule:   rgba(0,0,0,0.13);
+    --accent: #0A66C2;
+    --accent-soft: #004182;
+    --sans:    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --display: "Chakra Petch", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:    ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  html{ background: var(--bg); scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "ss01";
+  }
+
+  /* ============ READING PROGRESS BAR ============ */
+  .progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 60;
+    pointer-events: none;
+    box-shadow: 0 0 12px rgba(10,102,194,0.5);
+    transition: width 80ms linear;
+  }
+
+  body > .wrap{
+    position: relative;
+    z-index: 2;
+  }
+
+  ::selection{ background: var(--accent); color: #fff; }
+  img{ display:block; max-width:100%; height:auto; }
+
+  a{
+    color: var(--ink);
+    text-decoration: none;
+    transition: color .15s ease, opacity .15s ease;
+  }
+  a:hover{ color: var(--accent); }
+
+  .wrap{ max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+  /* ============ TOP NAV (glass) ============ */
+  nav.top{
+    position: sticky;
+    top: 16px;
+    z-index: 50;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+  nav.top .row{
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px;
+    color: var(--ink-2);
+    padding: 11px 22px;
+    background: rgba(255,255,255,0.72);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+            backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 999px;
+    box-shadow:
+      inset 0 1px 0 rgba(0,0,0,0),
+      0 12px 32px -12px rgba(0,0,0,0.1);
+  }
+  nav.top .brand{
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-family: var(--mono);
+    font-size: 12.5px;
+  }
+  nav.top .links{ display: flex; gap: 22px; }
+  nav.top .links a{ color: var(--ink-2); }
+  nav.top .links a:hover{ color: var(--ink); }
+
+  /* ============ HERO (centered, single-column) ============ */
+  .hero{
+    padding: 64px 0 52px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1.name{
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.032em;
+    margin: 0 0 24px;
+    color: var(--ink);
+    max-width: 20ch;
+  }
+  .hero-sub{
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #444444;
+    margin: 0 0 30px;
+    max-width: 44ch;
+  }
+  .authors{
+    font-family: var(--display);
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 14px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    max-width: 32ch;
+  }
+  .authors a{
+    color: var(--ink);
+    border-bottom: 1px solid rgba(10,102,194,0.55);
+    padding-bottom: 1px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .authors a:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+  .meta-line{
+    font-size: 12px;
+    color: var(--ink-3);
+    margin: 26px 0 0;
+    max-width: 46ch;
+  }
+  .meta-line .sep{ color: var(--ink-3); margin: 0 8px; }
+
+  /* Primary CTA (glass red pill) */
+  .follow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    background: rgba(10,102,194,0.13);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+            backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(10,102,194,0.42);
+    border-radius: 999px;
+    color: var(--accent-soft);
+    font-weight: 500;
+    font-size: 14.5px;
+    letter-spacing: 0.01em;
+    box-shadow:
+      inset 0 1px 0 rgba(0,0,0,0),
+      0 10px 28px -14px rgba(10,102,194,0.55),
+      0 4px 12px -4px rgba(0,0,0,0.08);
+    transition: transform .2s ease, background .2s ease, border-color .2s ease, color .15s ease, box-shadow .2s ease;
+    cursor: pointer;
+  }
+  .follow:hover{
+    background: rgba(10,102,194,0.24);
+    border-color: rgba(10,102,194,0.68);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgba(0,0,0,0),
+      0 14px 32px -14px rgba(10,102,194,0.65),
+      0 6px 16px -4px rgba(0,0,0,0.09);
+  }
+  .follow .arr{ font-size: 16px; line-height: 1; }
+
+  .press-kit{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    background: #ffffff;
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+            backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(0,0,0,0.14);
+    border-radius: 999px;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 14.5px;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    box-shadow:
+      inset 0 1px 0 rgba(0,0,0,0.14),
+      0 6px 18px -10px rgba(0,0,0,0.1);
+    transition: transform .2s ease, background .2s ease, border-color .2s ease, color .15s ease;
+    cursor: pointer;
+  }
+  .press-kit:hover{
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.28);
+    transform: translateY(-2px);
+    color: var(--ink);
+  }
+  .press-kit svg{ width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+  .cta-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 8px;
+    justify-content: center;
+  }
+
+  /* ============ STICKY WORKFLOW MENU ============ */
+  .sticky-flow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+  }
+  .sticky-flow.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .sf-step{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 4px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0);
+    text-decoration: none;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    transition: background .18s ease, gap .18s ease, padding .18s ease, box-shadow .18s ease;
+  }
+  .sf-step:hover{
+    background: rgba(255,255,255,0.95);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(16px) saturate(180%);
+    gap: 11px;
+    padding: 4px 4px 4px 18px;
+    box-shadow: 0 10px 26px -10px rgba(0,0,0,0.32);
+  }
+  .sf-n{
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px -6px rgba(0,0,0,0.4);
+  }
+  .sf-t{
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-width .22s ease, opacity .16s ease;
+  }
+  .sf-step:hover .sf-t{
+    max-width: 240px;
+    opacity: 1;
+  }
+  @media (max-width: 480px){
+    .sticky-flow{ bottom: 16px; right: 16px; }
+  }
+
+  /* ============ AUTHOR DOCK ============ */
+  .author-dock{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+  }
+  .author-dock.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .ad-item{
+    position: relative;
+    display: block;
+    width: 46px;
+    height: 46px;
+    transition: transform .15s ease;
+  }
+  .ad-item:hover{ transform: translateY(-2px); }
+  .ad-photo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid rgba(0,0,0,0.12);
+    background: var(--bg-2);
+    box-shadow: 0 8px 20px -8px rgba(0,0,0,0.16);
+    transition: border-color .15s ease;
+  }
+  .ad-item:hover .ad-photo{ border-color: rgba(10,102,194,0.6); }
+  .ad-photo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .ad-badge{
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1.5px solid var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px -1px rgba(0,0,0,0.12);
+  }
+  .ad-badge svg{
+    width: 13px;
+    height: 13px;
+    fill: #0A66C2;
+  }
+  @media (max-width: 480px){
+    .author-dock{
+      left: 16px;
+      bottom: 16px;
+      gap: 8px;
+    }
+    .ad-item{ width: 40px; height: 40px; }
+    .ad-badge{ width: 16px; height: 16px; }
+    .ad-badge svg{ width: 11px; height: 11px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .author-dock{ transition: opacity .25s ease, visibility .25s ease; transform: none; }
+  }
+
+  /* ============ SECTIONS ============ */
+  section{
+    padding: 56px 0;
+    border-top: 0;
+  }
+  section:first-of-type{ border-top: 0; }
+
+  /* section hairlines */
+  section, .quiz-q, .jd-block, .resp-block, .tier-body, footer.site{
+    position: relative;
+  }
+  section::before, .quiz-q::before, .jd-block::before,
+  .resp-block::before, .tier-body::before, footer.site::before{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 1px;
+    background: var(--rule);
+    pointer-events: none;
+  }
+  section:first-of-type::before,
+  .quiz-q:first-of-type::before,
+  .jd-block:first-child::before,
+  .resp-block:first-of-type::before{
+    display: none;
+  }
+
+  .kicker{
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .kicker::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.85;
+    flex-shrink: 0;
+  }
+  h2{
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(26px, 3.4vw, 36px);
+    line-height: 1.14;
+    letter-spacing: -0.028em;
+    color: var(--ink);
+    margin: 0 0 28px;
+    max-width: 22ch;
+  }
+  h2.wide{ max-width: 40ch; }
+  .section-intro{
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-2);
+    margin: -18px 0 24px;
+    font-style: italic;
+    letter-spacing: 0.005em;
+  }
+
+  /* ============ PROSE PARAGRAPHS ============ */
+  .bio{
+    font-size: 16.5px;
+    line-height: 1.68;
+    color: #1B1B1B;
+    margin: 0 0 16px;
+    max-width: 62ch;
+  }
+  .bio:last-of-type{ margin-bottom: 6px; }
+  .bio strong{ color: var(--ink); font-weight: 600; }
+  .bio em.accent{
+    color: var(--accent-soft);
+    font-style: normal;
+    font-weight: 600;
+  }
+  .bio.muted{
+    color: var(--ink-2);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  /* ============ INTRO CARD ============ */
+  .intro-card{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 26px 28px;
+    margin: 8px 0 0;
+  }
+  .intro-card .bio:last-child{ margin-bottom: 0; }
+
+  /* ============ QUESTIONNAIRE ============ */
+  .quiz-lead{
+    font-size: 15px;
+    color: var(--ink-2);
+    margin: -10px 0 22px;
+    max-width: 56ch;
+    line-height: 1.6;
+  }
+  .quiz-progress{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 30px;
+  }
+  .qp-bar{
+    flex: 1;
+    height: 6px;
+    background: rgba(0,0,0,0.09);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .qp-fill{
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    border-radius: 999px;
+    transition: width .3s ease;
+  }
+  .qp-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  .quiz-q{
+    padding: 22px 0;
+    border-top: 0;
+  }
+  .quiz-q:first-of-type{ border-top: 0; padding-top: 4px; }
+  .q-head{
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    margin: 0 0 14px;
+  }
+  .q-num{
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(10,102,194,0.10);
+    border: 1px solid rgba(10,102,194,0.35);
+    border-radius: 4px;
+    padding: 2px 6px;
+    flex-shrink: 0;
+  }
+  .q-text{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.34;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .quiz-opts{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quiz-opt{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .quiz-opt:hover{
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.16);
+  }
+  .quiz-opt input{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .quiz-opt .tick{
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid var(--ink-3);
+    margin-top: 1px;
+    transition: border-color .15s ease, background .15s ease;
+    position: relative;
+  }
+  .quiz-opt.selected{
+    background: rgba(10,102,194,0.10);
+    border-color: rgba(10,102,194,0.45);
+  }
+  .quiz-opt.selected .tick{
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+  .quiz-opt.selected .tick::after{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: var(--bg);
+  }
+  .quiz-actions{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  button.quiz-submit{
+    appearance: none;
+    font-family: var(--sans);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    background: rgba(10,102,194,0.16);
+    border: 1px solid rgba(10,102,194,0.5);
+    border-radius: 999px;
+    color: var(--accent-soft);
+    font-weight: 500;
+    font-size: 14.5px;
+    cursor: pointer;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease, opacity .15s ease;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0), 0 8px 22px -12px rgba(10,102,194,0.5);
+  }
+  button.quiz-submit:hover:not(:disabled){
+    background: rgba(10,102,194,0.28);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  button.quiz-submit:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .quiz-skip{
+    font-size: 13.5px;
+    color: var(--ink-2);
+    border-bottom: 1px solid var(--ink-3);
+    padding-bottom: 1px;
+    cursor: pointer;
+  }
+  .quiz-skip:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+  .quiz-hint{
+    font-size: 12.5px;
+    color: var(--ink-3);
+    margin: 14px 0 0;
+  }
+
+  /* ============ RESULT BANNER ============ */
+  .result-banner{
+    display: none;
+    background: rgba(10,102,194,0.09);
+    border: 1px solid rgba(10,102,194,0.4);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin: 0 0 32px;
+  }
+  .result-banner.show{ display: block; }
+  .result-banner .r-kicker{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+  .result-banner .r-title{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .result-banner .r-note{
+    font-size: 14px;
+    color: var(--ink-2);
+    margin: 0;
+  }
+  .result-actions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .result-actions .share-pill{ font-size: 13px; padding: 9px 15px; }
+  .result-compare{
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--accent-soft);
+    margin-left: 2px;
+    white-space: nowrap;
+  }
+  .result-compare:hover{ color: var(--accent); }
+
+  /* ============ VERSION SWITCHER ============ */
+  .vtabs{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 8px;
+  }
+  .vtab{
+    appearance: none;
+    font-family: var(--sans);
+    flex: 1 1 auto;
+    min-width: 150px;
+    text-align: left;
+    padding: 13px 16px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .vtab:hover{ background: #ffffff; transform: translateY(-1px); }
+  .vtab .vt-name{
+    display: block;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .vtab .vt-tag{
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-top: 4px;
+  }
+  .vtab.active{
+    background: rgba(10,102,194,0.12);
+    border-color: rgba(10,102,194,0.5);
+  }
+  .vtab.active .vt-tag{ color: var(--accent); }
+
+  /* ============ VERSION PANELS ============ */
+  .version-panel{ display: none; }
+  .version-panel.active{ display: block; }
+
+  .author-card{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 22px;
+    margin: 24px 0 8px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    flex-wrap: wrap;
+  }
+  .author-card .ac-photo{
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.16);
+    background: transparent;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  /* the three authors (in hero) */
+  .intro-authors{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(6px, 2.5vw, 18px);
+    margin: 8px auto 20px;
+    width: 100%;
+    max-width: 560px;
+    justify-content: center;
+  }
+  .intro-author{
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .intro-author .ia-frame{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 132px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    transition: transform .15s ease;
+  }
+  .ia-photo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.16);
+    background: transparent;
+    overflow: hidden;
+    box-shadow: 0 14px 34px -16px rgba(0,0,0,0.16);
+    transition: border-color .15s ease;
+  }
+  .intro-author img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .ia-vote{
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .ia-vote svg{
+    width: 10px;
+    height: 10px;
+    fill: #fff;
+  }
+  .intro-author .ia-name{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 14px 0 0;
+  }
+  .intro-author .ia-role{
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .intro-author .ia-name a{ color: inherit; }
+  .intro-author .ia-name a:hover{ color: var(--accent); }
+  a.ia-frame:hover{ transform: translateY(-2px); }
+  a.ia-frame:hover .ia-photo{ border-color: rgba(10,102,194,0.55); }
+  .ac-photo-link{ flex-shrink: 0; display: block; line-height: 0; border-radius: 50%; }
+  .ac-photo-link:hover .ac-photo{ border-color: rgba(10,102,194,0.55); }
+  /* three authors stay side by side on narrow screens; shrink labels to fit */
+  @media (max-width: 560px){
+    .intro-author .ia-role{
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      gap: 5px;
+      margin: 0 0 11px;
+    }
+    .ia-vote{ font-size: 9px; padding: 1px 6px; gap: 2px; }
+    .ia-vote svg{ width: 8px; height: 8px; }
+    .intro-author .ia-name{ font-size: 12px; margin-top: 11px; }
+  }
+
+  /* hashtag */
+  .htag{
+    font-family: var(--mono);
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(10,102,194,0.4);
+    padding-bottom: 1px;
+  }
+  .htag:hover{ color: #004182; border-bottom-color: var(--accent); }
+  .hd-tag{
+    font-family: var(--mono);
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  /* Hero 3-step call to action */
+  .steps-lead{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 32px 0 0;
+  }
+  .hero-steps{
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    margin: 12px 0 0;
+    width: 100%;
+  }
+  .hstep{
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: left;
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .hstep:hover{
+    border-color: rgba(10,102,194,0.55);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -12px rgba(0,0,0,0.25);
+  }
+  .hstep.hstep-primary{
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 10px 24px -12px rgba(10,102,194,0.7);
+  }
+  .hstep.hstep-primary .hs-t{ color: #ffffff; }
+  .hstep.hstep-primary .hs-n{
+    background: #ffffff;
+    color: var(--accent);
+  }
+  .hstep.hstep-primary:hover{
+    background: #0a5cb0;
+    border-color: #0a5cb0;
+  }
+  .hstep-link{
+    flex-shrink: 0;
+    align-self: center;
+    display: flex;
+    color: var(--ink-3);
+  }
+  .hstep-link svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .hs-n{
+    flex-shrink: 0;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hs-t{
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.32;
+  }
+  @media (max-width: 640px){
+    .hero-steps{ flex-direction: column; gap: 4px; }
+    .hstep-link{ transform: rotate(90deg); }
+  }
+  .debate-cta{
+    margin: 8px 0 4px;
+    padding: 22px 24px;
+    background: rgba(10,102,194,0.07);
+    border: 1px solid rgba(10,102,194,0.3);
+    border-radius: 14px;
+  }
+  .debate-h{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .debate-note{
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 60ch;
+  }
+  .author-card .ac-name{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 3px;
+  }
+  .author-card .ac-name a{
+    border-bottom: 1px solid rgba(10,102,194,0.4);
+    padding-bottom: 1px;
+  }
+  .author-card .ac-role{
+    font-size: 13px;
+    color: var(--ink-2);
+    margin: 0 0 6px;
+  }
+  .author-card .ac-vantage{
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ============ VERSION RATING (back this view) ============ */
+  .rate-leader{
+    margin: 16px 0 4px;
+    padding: 11px 18px;
+    background: rgba(10,102,194,0.08);
+    border: 1px solid rgba(10,102,194,0.22);
+    border-radius: 999px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--ink-2);
+    text-align: center;
+  }
+  .rate-leader strong{
+    color: var(--accent);
+    font-weight: 700;
+  }
+  /* ===== v2: live results bar ===== */
+  .results-bar{ margin: 18px 0 6px; }
+  .results-bar[hidden]{ display: none; }
+  .rb-kicker{
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 9px;
+  }
+  .rb-track{
+    display: flex;
+    height: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.06);
+  }
+  .rb-seg{ height: 100%; transition: width .6s cubic-bezier(.22,.61,.36,1); }
+  .rb-opt{ background: #3a9b7a; }
+  .rb-trade{ background: #c9922b; }
+  .rb-pess{ background: #b4543a; }
+  .rb-legend{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    margin: 12px 0 4px;
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+  .rb-legend li{ display: flex; align-items: center; gap: 6px; }
+  .rb-legend b{ font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink-1); }
+  .rb-legend .rb-n-item{ opacity: .55; font-variant-numeric: tabular-nums; }
+  .rb-dot{ display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .rb-total{ font-size: 13px; opacity: .6; margin: 4px 0 0; }
+  .rb-total b{ font-variant-numeric: tabular-nums; }
+  @media (max-width: 560px){
+    .rb-legend{ gap: 12px; font-size: 13px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .rb-seg{ transition: none; }
+  }
+  /* ===== v2: segmentation dropdown ===== */
+  .seg-ask{ margin: 14px 0 2px; }
+  .seg-ask[hidden]{ display: none; }
+  .seg-ask label{
+    display: block;
+    font-size: 13.5px;
+    color: var(--ink-2);
+    margin: 0 0 7px;
+  }
+  .seg-ask select{
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: var(--sans);
+    font-size: 14px;
+    padding: 8px 34px 8px 13px;
+    border: 1px solid rgba(0,0,0,0.18);
+    border-radius: 10px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23666' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;
+    color: var(--ink-1);
+    cursor: pointer;
+    max-width: 320px;
+    width: 100%;
+  }
+  .seg-ask select:focus{ outline: 2px solid rgba(10,102,194,0.4); outline-offset: 1px; }
+  .seg-thanks{ font-size: 13px; color: var(--ink-3); margin: 7px 0 0; }
+  .seg-thanks[hidden]{ display: none; }
+  /* ===== v2: sticky vote count ===== */
+  .sf-count{
+    font-size: 11px;
+    opacity: .6;
+    margin-left: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .sf-count[hidden]{ display: none; }
+  /* ===== v2: compare-table reader column highlight ===== */
+  table.compare .col-you{ background: rgba(201,146,43,0.10); }
+  table.compare thead th.col-you{ box-shadow: inset 0 -3px 0 #c9922b; }
+  .col-you-note{ font-size: 12.5px; color: var(--ink-3); margin: 8px 0 0; }
+  .col-you-note[hidden]{ display: none; }
+  .author-card > div:not(.ac-rate){
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .ac-rate{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .ac-like{
+    appearance: none;
+    font-family: var(--sans);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 15px;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.16);
+    border-radius: 999px;
+    color: var(--ink-2);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .ac-like svg{
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+  }
+  .ac-like:hover{
+    border-color: rgba(10,102,194,0.5);
+    color: var(--accent);
+  }
+  .ac-like[aria-pressed="true"]{
+    background: rgba(10,102,194,0.1);
+    border-color: rgba(10,102,194,0.5);
+    color: var(--accent);
+  }
+  .ac-like[aria-pressed="true"] svg{
+    fill: var(--accent);
+    stroke: var(--accent);
+  }
+  .ac-like.is-pulsing svg{ animation: like-pulse 220ms ease-out; }
+  @keyframes like-pulse{
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.32); }
+    100% { transform: scale(1); }
+  }
+  .ac-rate-cap{
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ac-like.is-pulsing svg{ animation: none; }
+  }
+
+  .v3-placeholder{
+    text-align: center;
+    padding: 56px 28px;
+    background: #ffffff;
+    border: 1px dashed rgba(0,0,0,0.14);
+    border-radius: 16px;
+    margin: 24px 0 0;
+  }
+  .v3-placeholder .v3-mark{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  .v3-placeholder h3{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 14px;
+  }
+  .v3-placeholder p{
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0 auto 10px;
+    max-width: 48ch;
+  }
+
+  /* ============ NUMBERED RESPONSIBILITY BLOCKS ============ */
+  .jd-block{
+    padding: 40px 0;
+    border-top: 0;
+  }
+  .jd-block:first-child{ border-top: 0; padding-top: 24px; }
+  .resp-block{
+    padding: 22px 0 8px;
+    border-top: 0;
+  }
+  .resp-block:first-of-type{ border-top: 0; padding-top: 4px; }
+  .resp-block:last-of-type{ padding-bottom: 0; }
+  h3.subsection{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.32;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    color: var(--ink);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+  h3.subsection .num{
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    background: rgba(10,102,194,0.10);
+    border: 1px solid rgba(10,102,194,0.35);
+    border-radius: 4px;
+    padding: 2px 6px;
+    flex-shrink: 0;
+    transform: translateY(-2px);
+  }
+
+  /* ============ BULLET LIST ============ */
+  ul.bullets{
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+  }
+  ul.bullets li{
+    position: relative;
+    padding: 6px 0 6px 22px;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: #1B1B1B;
+    max-width: 62ch;
+  }
+  ul.bullets li::before{
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--accent);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  ul.bullets li strong{
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ============ METRICS DEFINITION LIST ============ */
+  dl.metrics{
+    margin: 0;
+    padding: 0;
+  }
+  dl.metrics dt{
+    position: relative;
+    padding-left: 22px;
+    margin: 14px 0 4px;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  dl.metrics dt::before{
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  dl.metrics dt:first-of-type{ margin-top: 0; }
+  dl.metrics dd{
+    margin: 0 0 8px 22px;
+    color: var(--ink-2);
+    font-size: 14.5px;
+    line-height: 1.55;
+    max-width: 60ch;
+  }
+
+  .jd-h{
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h3.jd-title{
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin: 0 0 20px;
+  }
+  .tier-model{
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: -10px 0 24px;
+  }
+
+  /* ---- Collapsible tiers (V3, Christoph Agten) ---- */
+  details.tier{
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    background: #ffffff;
+    margin: 0 0 12px;
+  }
+  details.tier[open]{
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.14);
+  }
+  summary.tier-head{
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 24px;
+    border-radius: 14px;
+    transition: background .15s ease;
+  }
+  summary.tier-head::-webkit-details-marker{ display: none; }
+  summary.tier-head:hover{ background: #ffffff; }
+  .tier-head-text{ flex: 1; min-width: 0; }
+  .tier-head-text .jd-h{ margin: 0 0 7px; }
+  .tier-head-text .jd-title{ margin: 0 0 7px; font-size: 21px; }
+  .tier-head-text .tier-model{ margin: 0; }
+  .tier-chevron{
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    transition: transform .2s ease, background .15s ease, border-color .15s ease;
+  }
+  summary.tier-head:hover .tier-chevron{
+    border-color: rgba(10,102,194,0.45);
+    background: rgba(10,102,194,0.10);
+  }
+  details.tier[open] .tier-chevron{ transform: rotate(180deg); }
+  .tier-chevron svg{ width: 16px; height: 16px; fill: currentColor; }
+  .tier-body{
+    padding: 0 24px 8px;
+    border-top: 0;
+  }
+  .tier-body .resp-block:first-of-type{ border-top: 0; padding-top: 20px; }
+
+  .author-note{
+    margin-top: 8px;
+    padding: 24px 26px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .author-note .an-h{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 14px;
+  }
+  .author-note .bio{ color: #404040; }
+  .footnote{
+    font-size: 12.5px;
+    color: var(--ink-3);
+    line-height: 1.55;
+    margin: 18px 0 0;
+    font-style: italic;
+  }
+
+  /* ============ COMPARISON MATRIX ============ */
+  .compare-scroll{ overflow-x: auto; margin: 8px -4px 0; padding: 0 4px; }
+  table.compare{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 460px;
+  }
+  table.compare th,
+  table.compare td{
+    text-align: left;
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+  table.compare thead th{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  table.compare thead th .ch-view{
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  table.compare thead th .ch-name{
+    display: block;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-3);
+    margin-top: 4px;
+  }
+  table.compare .vote-row th,
+  table.compare .vote-row td{
+    padding-top: 20px;
+  }
+  table.compare thead th:first-child{
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+  table.compare tbody th{
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  table.compare td{ width: 90px; }
+  .pips{ display: flex; gap: 5px; }
+  .pip{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(10,102,194,0.45);
+  }
+  .pip.on{ background: var(--accent); border-color: var(--accent); }
+  .compare-note{
+    font-size: 12.5px;
+    color: var(--ink-3);
+    margin: 16px 0 0;
+    line-height: 1.55;
+  }
+
+  /* ============ SHARE CARD ============ */
+  .share-card-wrap{
+    margin: 26px 0 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: 0 16px 40px -16px rgba(0,0,0,0.12);
+    max-width: 540px;
+    scroll-margin-top: 96px;
+  }
+  .share-card-wrap img{ width: 100%; display: block; }
+  .share-card-caption{
+    font-size: 12.5px;
+    color: var(--ink-3);
+    margin: -10px 0 22px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ============ SHARE ROW ============ */
+  .share-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 14px;
+  }
+  .share-pill{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 18px;
+    background: #ffffff;
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+            backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(0,0,0,0.14);
+    border-radius: 999px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 13.5px;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow:
+      inset 0 1px 0 rgba(0,0,0,0),
+      0 4px 14px -8px rgba(0,0,0,0.1);
+    transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .share-pill:hover{
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.28);
+    transform: translateY(-2px);
+    color: var(--ink);
+  }
+  .share-pill svg{ width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+  .share-pill.copied{
+    background: rgba(10,102,194,0.13);
+    border-color: rgba(10,102,194,0.5);
+    color: var(--accent-soft);
+  }
+  .share-pill.download{ margin-top: 4px; }
+
+  /* ============ ENVOI ============ */
+  section.envoi{ padding-top: 80px; }
+  .envoi-divider{
+    border: 0;
+    height: 1px;
+    background: var(--rule);
+    margin: 40px 0 36px;
+  }
+
+  /* ============ PUBLICATION BAR ============ */
+  .pub-bar{
+    display: flex;
+    align-items: center;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+    margin: 14px 0 0;
+    padding: 12px 22px;
+    background: rgba(10,102,194,0.07);
+    border: 1px solid rgba(10,102,194,0.28);
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background .18s ease, border-color .18s ease;
+  }
+  .pub-bar:hover{
+    background: rgba(10,102,194,0.12);
+    border-color: rgba(10,102,194,0.5);
+  }
+  .pub-flag{
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    padding: 5px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pub-text{
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    flex: 1 1 260px;
+    margin: 0;
+  }
+  .pub-text b{ color: var(--ink); font-weight: 600; }
+  .pub-go{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .pub-go svg{
+    width: 15px; height: 15px;
+    fill: none; stroke: currentColor; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+    transition: transform .18s ease;
+  }
+  .pub-bar:hover .pub-go svg{ transform: translateX(3px); }
+
+  /* ============ PAPER CARD ============ */
+  .paper-card{
+    margin: 26px 0 0;
+    padding: 26px 28px;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: 14px;
+  }
+  .pc-journal{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.01em;
+    color: var(--ink-3);
+    margin: 0 0 12px;
+  }
+  .pc-title{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.32;
+    color: var(--ink);
+    margin: 0 0 10px;
+    max-width: 46ch;
+  }
+  .pc-title a{ color: inherit; text-decoration: none; }
+  .pc-title a:hover{ color: var(--accent); }
+  .pc-authors{
+    font-size: 14.5px;
+    color: var(--ink-2);
+    margin: 0 0 20px;
+  }
+  .pc-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+  }
+  .pc-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background .18s ease;
+  }
+  .pc-btn:hover{ background: var(--accent-soft); }
+  .pc-btn svg{
+    width: 15px; height: 15px;
+    fill: none; stroke: currentColor; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .pc-doi{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    word-break: break-all;
+  }
+  .pc-doi:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+  .pc-oa{
+    font-size: 12.5px;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  .pc-cite{
+    margin: 22px 0 0;
+    padding: 14px 16px;
+    background: rgba(0,0,0,0.03);
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .pc-cite-h{
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 6px;
+  }
+  @media (max-width: 560px){
+    .pub-bar{ padding: 12px 16px; border-radius: 14px; }
+    .paper-card{ padding: 22px 18px; }
+    .pc-title{ font-size: 19px; }
+  }
+
+  /* ============ FOOTER ============ */
+  footer.site{
+    padding: 56px 0 64px;
+    margin-top: 28px;
+    border-top: 0;
+    color: var(--ink-2);
+    font-size: 13px;
+  }
+  footer.site .row{
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+    padding-top: 24px;
+  }
+  footer.site a{ color: var(--ink-2); }
+  footer.site a:hover{ color: var(--accent); }
+  footer.site .row a{
+    border-bottom: 1px solid rgba(10,102,194,0.4);
+    padding-bottom: 1px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  footer.site .row a:hover{ border-bottom-color: var(--accent); }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 600px){
+    .wrap{ padding: 0 20px; }
+    nav.top{ margin-top: 12px; top: 12px; }
+    nav.top .row{ padding: 10px 16px; }
+    nav.top .links{ gap: 14px; }
+    .hero{ padding: 36px 0 16px; }
+    section{ padding: 28px 0; }
+    h3.subsection{ font-size: 16px; }
+    footer.site{ padding: 40px 0 48px; }
+    footer.site .row{ padding-top: 20px; }
+    .author-dock{ display: none; }
+  }
+  @media (max-width: 480px){
+    nav.top .links a:not(:last-child){ display: none; }
+    .follow, .press-kit{ padding: 12px 18px; font-size: 14px; }
+    h1.name{ max-width: 100%; }
+    .vtab{ min-width: 100%; }
+  }
+  @media (max-width: 420px){
+    nav.top .row{ padding: 9px 14px; font-size: 12.5px; }
+  }
+</style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-Xg3IjPylJhQx44exYq6mF.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+<div class="wrap">
+
+  <nav class="top">
+    <div class="row">
+      <span class="brand">#radiologist2035</span>
+      <div class="links">
+        <a href="#test">The test</a>
+        <a href="#versions">Versions</a>
+        <a href="#compare">Compare</a>
+        <a href="#share">Share</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PUBLICATION BAR ============ -->
+  <a class="pub-bar plausible-event-name=PaperLink plausible-event-method=Bar" href="https://doi.org/10.1016/j.ejrai.2026.100118" target="_blank" rel="noopener">
+    <span class="pub-flag">Now published</span>
+    <span class="pub-text">Now a peer-reviewed viewpoint in <b>European Journal of Radiology Artificial Intelligence</b>.</span>
+    <span class="pub-go">Read it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></span>
+  </a>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <h1 class="name">The Job Description of the Diagnostic Radiologist in 2035</h1>
+    <p class="hero-sub">Three experts wrote it three ways, and they don't agree. Five questions tell you which future you're betting on.</p>
+    <div class="intro-authors">
+      <figure class="intro-author">
+        <p class="ia-role">Optimistic <span class="ia-vote" data-vote="t9001"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ia-vote-n">0</span></span></p>
+        <a class="ia-frame" href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener"><span class="ia-photo"><img src="assets/author-amine.png" alt="Dr. med. Amine Korchi" /></span></a>
+        <p class="ia-name"><a href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener">Dr. med. Amine<br>Korchi</a></p>
+      </figure>
+      <figure class="intro-author">
+        <p class="ia-role">Trade-off <span class="ia-vote" data-vote="t9002"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ia-vote-n">0</span></span></p>
+        <a class="ia-frame" href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener"><span class="ia-photo"><img src="assets/author-jan.png" alt="Jan Beger" /></span></a>
+        <p class="ia-name"><a href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener">Jan<br>Beger</a></p>
+      </figure>
+      <figure class="intro-author">
+        <p class="ia-role">Pessimistic <span class="ia-vote" data-vote="t9003"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ia-vote-n">0</span></span></p>
+        <a class="ia-frame" href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener"><span class="ia-photo"><img src="assets/author-christoph.png" alt="Dr. med. Christoph Agten" /></span></a>
+        <p class="ia-name"><a href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener">Dr. med. Christoph<br>Agten</a></p>
+      </figure>
+    </div>
+    <p class="steps-lead">How to take part</p>
+    <div class="hero-steps">
+      <a class="hstep hstep-primary" href="#test">
+        <span class="hs-n">1</span>
+        <span class="hs-t">Take the test</span>
+      </a>
+      <span class="hstep-link" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></span>
+      <a class="hstep" href="#versions">
+        <span class="hs-n">2</span>
+        <span class="hs-t">Vote for a view</span>
+      </a>
+      <span class="hstep-link" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></span>
+      <a class="hstep" href="https://www.linkedin.com/feed/hashtag/radiologist2035/" target="_blank" rel="noopener">
+        <span class="hs-n">3</span>
+        <span class="hs-t">Debate on LinkedIn</span>
+      </a>
+      <span class="hstep-link" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></svg></span>
+      <a class="hstep" href="#share">
+        <span class="hs-n">4</span>
+        <span class="hs-t">Spread the word</span>
+      </a>
+    </div>
+    <p class="meta-line">Peer-reviewed version published July 2026 &middot; Page last updated 2026-09<br>A personal project. Views are the authors' own, not those of any affiliated institutions or companies.</p>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <section id="intro">
+    <p class="kicker">The idea</p>
+    <h2 class="wide">Nobody knows what this job becomes.<br>So we wrote it three ways.</h2>
+    <div class="intro-card">
+      <p class="bio">Three people wrote three versions of the same job description: the diagnostic radiologist in 2035. Two are radiologists. One is a health-tech professional with 20+ years in medical imaging IT. The vantage points are different on purpose, because the future of this job is not only a clinical question. It is also an economic one.</p>
+      <p class="bio">One version is <strong>optimistic</strong>: the radiologist grows into an orchestrator of AI. One is the <strong>trade-off view</strong>, written from the medical imaging IT side: the clinical job gets better, but there will be fewer radiologists. One is <strong>pessimistic</strong>: the profession splits into tiers, from a scarce on-site elite to a large, low-paid remote audit workforce.</p>
+      <p class="bio">Answer five questions about what you believe will be true. We show you the version that matches your outlook. Then you can read all three and compare them side by side.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONNAIRE ============ -->
+  <section id="test">
+    <p class="kicker">The test</p>
+    <h2>Which 2035 do you believe in?</h2>
+    <p class="quiz-lead">Five questions. Pick the answer closest to what you expect. There are no right answers, only the future you find most likely.</p>
+
+    <div class="quiz-progress">
+      <div class="qp-bar"><div class="qp-fill" id="qpFill"></div></div>
+      <span class="qp-label" id="qpLabel">0 of 5 answered</span>
+    </div>
+
+    <form id="quiz">
+      <div class="quiz-q">
+        <div class="q-head"><span class="q-num">Q1</span><span class="q-text">By 2035, the number of practising diagnostic radiologists will have:</span></div>
+        <div class="quiz-opts">
+          <label class="quiz-opt"><input type="radio" name="q1" value="optimistic"><span class="tick"></span><span>Grown. Imaging demand and AI together expand the profession.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q1" value="realist"><span class="tick"></span><span>Held roughly steady in title, but the role itself will have changed.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q1" value="pessimistic"><span class="tick"></span><span>Grown into an oversupply, with most radiologists in low-paid audit roles.</span></label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-head"><span class="q-num">Q2</span><span class="q-text">By 2035, for most routine studies, the radiologist will be:</span></div>
+        <div class="quiz-opts">
+          <label class="quiz-opt"><input type="radio" name="q2" value="optimistic"><span class="tick"></span><span>The active reader, with AI as a co-pilot.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q2" value="realist"><span class="tick"></span><span>The accountable final authority, reviewing AI-drafted reports.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q2" value="pessimistic"><span class="tick"></span><span>Out of the routine read entirely; AI reports autonomously and humans audit a sample.</span></label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-head"><span class="q-num">Q3</span><span class="q-text">By 2035, the radiologist's working day will mostly involve:</span></div>
+        <div class="quiz-opts">
+          <label class="quiz-opt"><input type="radio" name="q3" value="optimistic"><span class="tick"></span><span>Higher-value work: orchestration, MDMs, direct patient contact.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q3" value="realist"><span class="tick"></span><span>Harder cases and more clinical exposure, on a smaller team.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q3" value="pessimistic"><span class="tick"></span><span>High-volume auditing of AI output, with the best roles kept for a scarce elite.</span></label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-head"><span class="q-num">Q4</span><span class="q-text">AI's main effect on radiology employment by 2035 will be:</span></div>
+        <div class="quiz-opts">
+          <label class="quiz-opt"><input type="radio" name="q4" value="optimistic"><span class="tick"></span><span>Expansion. AI grows imaging's value, and the profession with it.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q4" value="realist"><span class="tick"></span><span>Substitution. More output per radiologist, so fewer radiologists.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q4" value="pessimistic"><span class="tick"></span><span>Stratification. The job splits into a scarce elite and a low-paid majority.</span></label>
+        </div>
+      </div>
+
+      <div class="quiz-q">
+        <div class="q-head"><span class="q-num">Q5</span><span class="q-text">The biggest career risk for a radiologist starting out today is:</span></div>
+        <div class="quiz-opts">
+          <label class="quiz-opt"><input type="radio" name="q5" value="optimistic"><span class="tick"></span><span>Moving too slowly to build AI fluency and lead the change.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q5" value="realist"><span class="tick"></span><span>Underestimating how much the headcount math will change.</span></label>
+          <label class="quiz-opt"><input type="radio" name="q5" value="pessimistic"><span class="tick"></span><span>Ending up in the low-paid audit tier instead of the scarce elite.</span></label>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button type="button" class="quiz-submit plausible-event-name=QuizComplete" id="quizSubmit" disabled>
+          See my result
+          <span class="arr">→</span>
+        </button>
+        <span class="quiz-skip" id="quizSkip">Skip, show me all three</span>
+      </div>
+      <p class="quiz-hint" id="quizHint">Answer all five questions to see your result.</p>
+    </form>
+  </section>
+
+  <!-- ============ VERSIONS ============ -->
+  <section id="versions">
+    <p class="kicker">The versions</p>
+    <h2>Three job descriptions for 2035.</h2>
+
+    <div class="result-banner" id="resultBanner">
+      <p class="r-kicker">Your result</p>
+      <p class="r-title" id="resultTitle">Your result.</p>
+      <p class="r-note" id="resultNote">Here is that version in full. Use the tabs to read the other two.</p>
+      <div class="result-actions">
+        <button class="share-pill" data-rshare="linkedin" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          <span class="label">Share my result</span>
+        </button>
+        <button class="share-pill" data-rshare="x" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          On X
+        </button>
+        <button class="share-pill" data-rshare="copy" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.59 13.41a1 1 0 011.42 0 3 3 0 004.24 0l3.54-3.54a3 3 0 00-4.24-4.24L13.93 7.25a1 1 0 11-1.41-1.41l1.62-1.62a5 5 0 117.07 7.07l-3.54 3.54a5 5 0 01-7.07 0 1 1 0 010-1.42zm2.82-2.82a1 1 0 01-1.42 0 3 3 0 00-4.24 0L4.21 14.13a3 3 0 004.24 4.24l1.62-1.62a1 1 0 011.41 1.41l-1.62 1.62a5 5 0 11-7.07-7.07l3.54-3.54a5 5 0 017.07 0 1 1 0 010 1.42z"/></svg>
+          <span class="label">Copy link</span>
+        </button>
+        <a class="result-compare" href="#compare">Compare all three &rarr;</a>
+      </div>
+    </div>
+
+    <div class="vtabs" role="tablist">
+      <button class="vtab active" data-version="optimistic" id="tab-optimistic">
+        <span class="vt-name">Dr. med. Amine Korchi</span>
+        <span class="vt-tag">Optimistic</span>
+      </button>
+      <button class="vtab" data-version="realist" id="tab-realist">
+        <span class="vt-name">Jan Beger</span>
+        <span class="vt-tag">Trade-off</span>
+      </button>
+      <button class="vtab" data-version="pessimistic" id="tab-pessimistic">
+        <span class="vt-name">Dr. med. Christoph Agten</span>
+        <span class="vt-tag">Pessimistic</span>
+      </button>
+    </div>
+
+    <div class="results-bar" id="resultsBar" hidden aria-live="polite">
+      <p class="rb-kicker">Where readers land</p>
+      <div class="rb-track" role="img" aria-label="Vote split across the three views">
+        <span class="rb-seg rb-opt"   data-id="t9001" style="width:0%"></span>
+        <span class="rb-seg rb-trade" data-id="t9002" style="width:0%"></span>
+        <span class="rb-seg rb-pess"  data-id="t9003" style="width:0%"></span>
+      </div>
+      <ul class="rb-legend">
+        <li><span class="rb-dot rb-opt"></span>Optimistic <b data-pct="t9001">0%</b> <span class="rb-n-item" data-n="t9001">0</span></li>
+        <li><span class="rb-dot rb-trade"></span>Trade-off <b data-pct="t9002">0%</b> <span class="rb-n-item" data-n="t9002">0</span></li>
+        <li><span class="rb-dot rb-pess"></span>Pessimistic <b data-pct="t9003">0%</b> <span class="rb-n-item" data-n="t9003">0</span></li>
+      </ul>
+      <p class="rb-total">Based on <b id="rbTotal">0</b> readers so far.</p>
+    </div>
+
+    <div class="seg-ask" id="segAsk" hidden>
+      <label for="segSel">One optional question, so we can show how different groups see it &mdash; which best describes you?</label>
+      <select id="segSel">
+        <option value="">Prefer not to say</option>
+        <option value="rad">Radiologist</option>
+        <option value="clin">Other clinician</option>
+        <option value="tech">Health-tech / informatics</option>
+        <option value="ind">Industry / vendor</option>
+        <option value="other">Other</option>
+      </select>
+      <p class="seg-thanks" id="segThanks" hidden>Thanks &mdash; counted.</p>
+    </div>
+
+    <!-- ====== VERSION 1: AMINE KORCHI (OPTIMISTIC) ====== -->
+    <div class="version-panel active" data-version="optimistic" id="panel-optimistic">
+      <div class="author-card">
+        <a class="ac-photo-link" href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener"><img class="ac-photo" src="assets/author-amine.png" alt="Dr. med. Amine Korchi" /></a>
+        <div>
+          <p class="ac-name"><a href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener">Dr. med. Amine Korchi</a></p>
+          <p class="ac-role">Radiologist and neuroradiologist</p>
+          <p class="ac-vantage">The optimistic view</p>
+        </div>
+        <div class="ac-rate">
+          <button class="ac-like" type="button" data-rate="t9001" aria-pressed="false" aria-label="Back this version">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="ac-like-count">0</span>
+          </button>
+          <span class="ac-rate-cap">back this view</span>
+        </div>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">01 &middot; Summary</p>
+        <h3 class="jd-title">Position summary.</h3>
+        <p class="bio">By <em class="accent">2035</em>, the radiologist's role has evolved from traditional worklist-based image reporting to that of a <em class="accent">diagnostic orchestrator</em>, leveraging AI as a co-pilot to augment image interpretation, integrate multimodal data, and turn complexity into clear, actionable insights for clinicians and patients.</p>
+        <p class="bio">A new generation of AI tools supports radiologists by enabling faster image acquisition and lower doses while maintaining high quality, enhancing image analysis through automated lesions detection, quantification, and characterization, and generating structured preliminary reports ready for review and validation, including patient-friendly summaries. These tools also provide prognostic and predictive insights based on multimodal data.</p>
+        <p class="bio">Radiologists remain the <strong>primary decision-makers</strong>, retaining full control over AI outputs and their use, and leading communication with both clinicians and patients. As automation expands in routine cases, their focus increasingly shifts toward complex diagnostics, edge cases, multidisciplinary decision-making, and interventional procedures.</p>
+        <p class="bio">As AI handles more of the routine read, the radiologist has an opportunity, and a responsibility, to become more visible: known by name to patients and referrers, not just as a signature on a report. <strong>The human touch becomes a differentiator, not a given.</strong></p>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">02 &middot; Responsibilities</p>
+        <h3 class="jd-title">Key responsibilities.</h3>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">01</span>Timely diagnostic imaging reporting and communication, with AI as a co-pilot, and expansion of interventional radiology</h3>
+          <ul class="bullets">
+            <li>Near-immediate turnaround for emergency cases, and within hours for non-emergent studies</li>
+            <li>High diagnostic accuracy with no critical misses</li>
+            <li>AI-enabled workflow optimization, including: worklist prioritization, detection and alerting of emergent findings, automated image analysis, generation of preliminary draft reports, AI-augmented voice recognition</li>
+            <li>Flexible reading models, combining subspecialty expertise and generalist coverage to optimize precision and efficiency</li>
+            <li>Contribute to patient-facing radiology, including direct communication, education, and shared decision-making when appropriate</li>
+            <li>Expansion into image-guided procedures and minimally invasive therapies as a core domain of human-added value</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">02</span>Active participation in radiology practice organization and business strategy</h3>
+          <ul class="bullets">
+            <li>Attend monthly/quarterly multidisciplinary team meetings with radiologists, technologists, administrative staff, and management</li>
+            <li>Contribute to continuous improvement of workflows, operations, and organizational processes to enhance efficiency, quality, and workplace well-being</li>
+            <li>Leverage data and performance metrics (e.g., turnaround times, quality indicators) to inform decision-making and optimize resource allocation</li>
+            <li>Collaborate in the integration and evaluation of new technologies, including AI tools, to ensure clinical relevance and operational value</li>
+            <li>Contribute to strategic discussions on service development, growth opportunities, and patient-centered care models</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">03</span>AI stewardship, oversight, and co-development</h3>
+          <ul class="bullets">
+            <li>Participate in the selection, validation, testing, and implementation of AI solutions</li>
+            <li>Monitor AI performance in real-world settings and identify, escalate, and document any drift or degradation</li>
+            <li>Contribute to continuous post-deployment surveillance, including quality assurance and regulatory compliance</li>
+            <li>Collaborate with industry partners to suggest new features, improvements, and clinical use cases, and engage in co-development initiatives when relevant</li>
+            <li>Build, with institutional support, AI-augmented workflows across defined levels of automation (L0&ndash;L4), with clear go/no-go criteria, guardrails, and rollback protocols</li>
+            <li>Translate automation gains into reduced turnaround times and backlog, while stewarding dose optimization, scanner time, computational efficiency, and appropriate imaging utilization</li>
+            <li>Ensure ethical, transparent, and fair use of AI, including awareness of bias, explainability, and patient consent</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">04</span>Multidisciplinary collaboration and data integration</h3>
+          <ul class="bullets">
+            <li>Participate in multidisciplinary meetings (MDMs) as a diagnostic orchestrator</li>
+            <li>Take ownership of the organization and efficiency of MDMs, including multimodal data flow and integration of AI tools</li>
+            <li>Synthesize imaging with pathology, genomics, laboratory, and clinical data to support comprehensive diagnosis</li>
+            <li>Deliver AI-augmented insights combining radiology and multimodal data</li>
+            <li>Act as a bridge between data scientists and clinicians, supporting precision medicine and cost-effective care</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">05</span>Quality assurance, education, and leadership</h3>
+          <ul class="bullets">
+            <li>Participate in peer review and discrepancy learning loops to support continuous improvement and a strong safety culture</li>
+            <li>Engage in structured peer learning through case sharing, multidisciplinary discussions, and presentations</li>
+            <li>Mentor and support colleagues across experience levels, fostering knowledge transmission and professional development</li>
+            <li>Contribute to the development of best practices, guidelines, and quality standards within the organization</li>
+            <li>Commit to continuous learning, including AI fluency, data science fundamentals, and a high-level understanding of adjacent disciplines (e.g., pathology, genomics)</li>
+            <li>Promote a culture of openness, feedback, and collective intelligence, embracing innovation and lifelong learning</li>
+            <li>Contribute to research, publications, and thought leadership in AI and imaging</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">06</span>Professional attitude and work culture</h3>
+          <ul class="bullets">
+            <li>Foster a positive, respectful, and collaborative attitude toward colleagues, partners, and patients</li>
+            <li>Contribute to a healthy, inclusive, and supportive work environment, promoting teamwork and psychological safety</li>
+            <li>Take responsibility for personal well-being, including physical and mental health, and make appropriate use of available resources</li>
+            <li>Demonstrate collegiality, mutual support, and accountability within the team</li>
+            <li>Embrace professionalism, adaptability, and resilience in a rapidly evolving clinical and technological environment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">03 &middot; Required</p>
+        <h3 class="jd-title">Required qualifications.</h3>
+        <ul class="bullets">
+          <li>MD (or equivalent) with board certification in Diagnostic Radiology; eligible for licensure in the country of practice</li>
+          <li>Demonstrated AI fluency, evidenced by recognized coursework or micro-credential in clinical AI or imaging informatics (or commitment to complete within 12 months, with institutional support)</li>
+          <li>Excellent communication skills (both clinician- and patient-facing), with proficiency in structured and quantitative reporting</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">04 &middot; Preferred</p>
+        <h3 class="jd-title">Preferred qualifications.</h3>
+        <ul class="bullets">
+          <li>Fellowship training (e.g., oncologic, neuro, cardiothoracic, pediatric radiology) and/or procedural expertise as locally required</li>
+          <li>Fluency with DICOMweb, HL7 FHIR, and structured vocabularies (e.g., RadLex; indication-specific systems such as BI-RADS, LI-RADS, PI-RADS where relevant)</li>
+          <li>Experience in AI governance and post-market surveillance, including dataset curation, validation, and performance monitoring</li>
+          <li>Exposure to quantitative imaging (e.g., QIBA), multi-site or teleradiology workflows, and secure remote reading environments</li>
+          <li>Leadership experience in multidisciplinary settings, including collaboration with IT and enterprise architecture teams on PACS, VNA, RIS, and reporting integrations</li>
+          <li>Familiarity with value-based care models and health economics, including the impact of imaging and AI on outcomes and cost-effectiveness</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">05 &middot; Environment</p>
+        <h3 class="jd-title">Work environment and conditions.</h3>
+        <ul class="bullets">
+          <li>Hybrid and remote work options, with institutional support for home workstations</li>
+          <li>Teleradiology across sites, with opportunities for subspecialty reading based on expertise and preference</li>
+          <li>Protected time and silent zones for deep reporting work</li>
+          <li>AI-enabled safety net ("second read") operating in the background to detect potential errors and provide timely alerts</li>
+          <li>Access to advanced data and AI infrastructure</li>
+          <li>Continuous learning supported by AI-curated CME, with protected time (e.g., 3&ndash;4 weeks/year) and participation in innovation programs</li>
+          <li>Dedicated protected time for future skills development, including cross-training toward higher-complexity diagnostics and procedural pathways</li>
+          <li>Financial and time support for leadership, business, and professional development</li>
+          <li>Access to mental health resources and initiatives promoting a healthy workplace</li>
+          <li>Dedicated time for non-reporting and non-clinical tasks</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">06 &middot; Success</p>
+        <h3 class="jd-title">Success measures.</h3>
+        <p class="section-intro">What "good" looks like.</p>
+        <dl class="metrics">
+          <dt>Turnaround time (TAT)</dt>
+          <dd>&lt;2 hours for routine cases; near-real-time for emergencies</dd>
+          <dt>Diagnostic quality</dt>
+          <dd>Low rate of clinically significant errors, as assessed through peer review and AI-supported monitoring</dd>
+          <dt>Referrer engagement</dt>
+          <dd>Growth in referring physicians and high retention rates</dd>
+          <dt>Satisfaction</dt>
+          <dd>High patient and clinician satisfaction, measured through NPS or equivalent metrics</dd>
+          <dt>AI adoption and impact</dt>
+          <dd>Successful integration and consistent use of AI tools, with demonstrated improvements in efficiency and quality</dd>
+          <dt>Multidisciplinary engagement</dt>
+          <dd>High participation and leadership in MDTs</dd>
+          <dt>Workforce well-being</dt>
+          <dd>Low absenteeism and strong indicators of team engagement</dd>
+          <dt>Skills development</dt>
+          <dd>Continuous expansion of expertise across clinical, technological (AI/data), and leadership/business domains</dd>
+          <dt>Professional impact</dt>
+          <dd>Active involvement in institutional, local, national, or international committees, working groups, or task forces</dd>
+        </dl>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">07 &middot; Benefits</p>
+        <h3 class="jd-title">Benefits and perks.</h3>
+        <ul class="bullets">
+          <li>Competitive compensation aligned with clinical excellence, leadership, innovation, and measurable impact</li>
+          <li>Performance-based bonuses tied to the achievement of defined objectives</li>
+          <li>Flexible hybrid work model, with support for professional development (AI-curated CME and protected learning time)</li>
+          <li>Access to mental health support, including digital tools and counseling services</li>
+          <li>Growth stipend and dedicated time for cross-training in complex diagnostics, procedures, and adjacent skills</li>
+          <li>Additional benefits may include healthy meals and beverages, and flexible vacation policies based on performance, where permitted</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">08 &middot; Equal opportunity</p>
+        <h3 class="jd-title">Equal opportunity statement.</h3>
+        <p class="bio muted">We are committed to equal opportunity principles. All qualified applicants will be considered for employment without regard to legally protected characteristics, in accordance with applicable laws in the country of employment.</p>
+      </div>
+    </div>
+
+    <!-- ====== VERSION 2: JAN BEGER (THE TRADE-OFF VIEW) ====== -->
+    <div class="version-panel" data-version="realist" id="panel-realist">
+      <div class="author-card">
+        <a class="ac-photo-link" href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener"><img class="ac-photo" src="assets/author-jan.png" alt="Jan Beger" /></a>
+        <div>
+          <p class="ac-name"><a href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener">Jan Beger</a></p>
+          <p class="ac-role">Global Head of AI Advocacy, GE HealthCare. 20+ years in medical imaging IT. Not a radiologist; writes from the imaging-tech side.</p>
+          <p class="ac-vantage">The trade-off view</p>
+        </div>
+        <div class="ac-rate">
+          <button class="ac-like" type="button" data-rate="t9002" aria-pressed="false" aria-label="Back this version">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="ac-like-count">0</span>
+          </button>
+          <span class="ac-rate-cap">back this view</span>
+        </div>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">01 &middot; Summary</p>
+        <h3 class="jd-title">Position summary.</h3>
+        <p class="bio">By <em class="accent">2035</em>, the radiologist's role is still defined by clinical judgment. What has changed is the threshold for when that judgment is needed. AI manages the routine read across defined modalities and indications. What reaches the radiologist's desk is harder: rare presentations, multi-system complexity, studies where imaging and clinical context don't align, and cases where the cost of being wrong is highest.</p>
+        <p class="bio">The radiologist is the <strong>final clinical authority</strong>. Not the first reader on most studies, but the accountable one. That means carrying responsibility for AI outputs validated under their name alongside direct interpretation of the cases AI can't handle. Both are real functions. Neither is optional.</p>
+        <p class="bio">As routine reporting contracts, the consultative role expands. Radiologists in 2035 spend more time in clinical conversations, multidisciplinary meetings, and direct patient communication than today's radiologists. The profession is more visible, more integrated, and more exposed to the consequences of getting it wrong.</p>
+        <p class="bio">The economics of imaging AI point toward more output per radiologist, which means <em class="accent">fewer radiologists</em> per department. The job described here is a better version of today's role for the people who hold it. There will be fewer of them.</p>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">02 &middot; Responsibilities</p>
+        <h3 class="jd-title">Key responsibilities.</h3>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">01</span>Diagnostic reporting and complex case interpretation</h3>
+          <ul class="bullets">
+            <li>High-accuracy interpretation of complex, ambiguous, and rare presentations across modalities, with no critical misses</li>
+            <li>Final clinical authority on AI-generated reports for routine indications, with full accountability for validated outputs</li>
+            <li>Maintenance of independent search patterns and clinical vigilance on AI-processed studies; AI-positive results require scrutiny, not acceptance</li>
+            <li>Direct interpretation of cases outside AI training distributions: unusual anatomy, rare diagnoses, multi-system presentations, and populations underrepresented in training data</li>
+            <li>Near-real-time turnaround for emergency cases; defined windows for AI-processed routine studies</li>
+            <li>Structured, quantitative reporting with direct communication to referring clinicians on complex and high-stakes findings</li>
+            <li>Expansion into image-guided procedures and minimally invasive therapies as a core domain of clinical added value</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">02</span>Multidisciplinary collaboration and clinical integration</h3>
+          <ul class="bullets">
+            <li>Active participation in MDMs as the primary imaging voice, with ownership of imaging data quality and presentation</li>
+            <li>Synthesis of imaging findings with pathology, genomics, laboratory, and clinical data to support diagnosis and treatment decisions</li>
+            <li>Direct patient communication in cases that require it, including findings escalated from the AI pipeline</li>
+            <li>Contribution to precision medicine workflows where multimodal integration adds value beyond the imaging report alone</li>
+            <li>Bridge between imaging data and clinical decision-making, with enough context to be useful in both directions</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">03</span>Practice organization, AI governance, and quality</h3>
+          <ul class="bullets">
+            <li>Participation in the evaluation and deployment decisions for AI tools in clinical use, with clinical judgment as the primary input</li>
+            <li>Ongoing monitoring of AI output quality: detection of performance drift, systematic errors, and failure modes in real-world deployment</li>
+            <li>Escalation of AI degradation events with documented evidence to governance committees and vendors</li>
+            <li>Contribution to workflow design with awareness of departmental cost, throughput, and staffing constraints</li>
+            <li>Participation in peer review, discrepancy learning, and quality assurance processes</li>
+            <li>Contribution to post-market surveillance reporting as required by applicable regulatory frameworks</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">04</span>Education, research, and professional development</h3>
+          <ul class="bullets">
+            <li>Mentorship of colleagues across experience levels, with emphasis on clinical judgment in AI-assisted environments</li>
+            <li>Continuous learning across complex diagnostics, procedural pathways, and AI governance</li>
+            <li>Contribution to a culture of accountability, including open review of errors and near-misses</li>
+            <li>Participation in research, publications, or institutional and national working groups where relevant</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">03 &middot; Required</p>
+        <h3 class="jd-title">Required qualifications.</h3>
+        <ul class="bullets">
+          <li>MD (or equivalent) with board certification in Diagnostic Radiology; eligible for licensure in the country of practice</li>
+          <li>Subspecialty depth sufficient to handle the complexity mix that reaches the radiologist's desk when routine cases are AI-managed</li>
+          <li>Demonstrated AI fluency, evidenced by recognized coursework or micro-credential in clinical AI or imaging informatics (or commitment to complete within 12 months, with institutional support)</li>
+          <li>Capacity to carry legal and clinical responsibility for AI-validated outputs, including cases where errors originated upstream</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">04 &middot; Preferred</p>
+        <h3 class="jd-title">Preferred qualifications.</h3>
+        <ul class="bullets">
+          <li>Fellowship training in a domain where AI performance remains limited, including complex oncologic staging, rare neurological presentations, or pediatric imaging</li>
+          <li>Experience with post-market surveillance: drift detection, degradation documentation, and audit trail construction</li>
+          <li>Familiarity with liability frameworks governing AI-assisted clinical sign-off in the country of practice</li>
+          <li>Familiarity with health economics and value-based care models, including the cost and outcome implications of AI deployment in imaging</li>
+          <li>Leadership experience in multidisciplinary or institutional settings</li>
+          <li>Fluency with DICOMweb, HL7 FHIR, and structured vocabularies (e.g., RadLex; BI-RADS, LI-RADS, PI-RADS where relevant)</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">05 &middot; Environment</p>
+        <h3 class="jd-title">Work environment.</h3>
+        <ul class="bullets">
+          <li>Reading queue weighted toward complex and flagged cases, with routine studies processed by the AI pipeline before they arrive</li>
+          <li>Productivity benchmarked against AI-validated throughput baselines; volume per radiologist is higher than today's</li>
+          <li>Smaller departments than today's equivalents, with shared accountability across a tighter team</li>
+          <li>More direct clinical contact than traditional reading room models, with protected time for MDM participation and clinician communication</li>
+          <li>Teleradiology across sites, with subspecialty reading matched to case complexity and expertise</li>
+          <li>Protected time for continuing education, skills development, and research; supported by AI-curated CME</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">06 &middot; Success</p>
+        <h3 class="jd-title">Success measures.</h3>
+        <p class="section-intro">What "good" looks like.</p>
+        <dl class="metrics">
+          <dt>Diagnostic accuracy</dt>
+          <dd>Low rate of clinically significant errors, with particular weight on complex cases where AI provides no safety net; assessed through peer review and AI-supported monitoring</dd>
+          <dt>Turnaround time</dt>
+          <dd>Near-real-time for emergencies; within defined windows for routine AI-processed studies</dd>
+          <dt>Clinical integration</dt>
+          <dd>MDM participation, referrer engagement, and direct patient communication; growth in both volume and quality over time</dd>
+          <dt>Cost per exam</dt>
+          <dd>Throughput efficiency relative to departmental targets; a real constraint, not a secondary metric</dd>
+          <dt>Referrer satisfaction</dt>
+          <dd>High retention and engagement among referring clinicians; the radiologist is known by name, not just by report</dd>
+          <dt>Workforce sustainability</dt>
+          <dd>Team retention, absenteeism, and the ability to maintain a functioning department at reduced FTE count</dd>
+        </dl>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">07 &middot; Benefits</p>
+        <h3 class="jd-title">Benefits.</h3>
+        <ul class="bullets">
+          <li>Competitive compensation reflecting diagnostic complexity, throughput, and clinical leadership contribution</li>
+          <li>A worklist weighted toward complex cases; routine volume is handled before it reaches you</li>
+          <li>Greater clinical visibility than today's reading room roles, with expanded MDM and patient-facing responsibilities</li>
+          <li>Protected time for skills development across complex diagnostics, procedural pathways, and AI governance</li>
+          <li>Access to advanced imaging and AI infrastructure</li>
+          <li>Smaller, specialized teams with higher per-person accountability and less administrative overhead</li>
+        </ul>
+      </div>
+
+      <div class="jd-block">
+        <p class="jd-h">08 &middot; Equal opportunity</p>
+        <h3 class="jd-title">Equal opportunity statement.</h3>
+        <p class="bio muted">We are committed to equal opportunity principles. All qualified applicants will be considered for employment without regard to legally protected characteristics, in accordance with applicable laws in the country of employment.</p>
+      </div>
+
+      <div class="author-note">
+        <p class="an-h">From the author</p>
+        <p class="bio">This job description sits between two others. One is more optimistic about the radiologist's role as an active orchestrator of AI. One is more pessimistic, framing the role primarily as liability coverage for an autonomous pipeline.</p>
+        <p class="bio">My read: the clinical job is real and it's better than what it replaces. The complex cases, the MDMs, the direct clinical relationships, those are the parts of radiology most radiologists want more of today. They get more of them in 2035.</p>
+        <p class="bio">What the optimistic version underweights is the economics. More output per radiologist means fewer radiologists. That's not a failure of the profession. It's how automation works in every industry where it's been deployed at scale. Knowing that in advance is more useful than discovering it mid-career.</p>
+        <p class="bio">One caveat on timing: 2035 is roughly nine years away, and healthcare AI deployment moves slower than the technology does. Regulatory approval, liability frameworks, reimbursement models, and institutional restructuring don't move in parallel. The MASAI trial replaced one reader in one indication. Generalizing that across the reading room takes years, not months. The shape of the change is more reliable than its date: routine reads contract, complex work concentrates, the headcount math tightens. Read it as a direction, not a deadline.</p>
+        <p class="bio">Connect with me on <a href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener">LinkedIn</a>. I want to hear where you disagree.</p>
+        <p class="footnote">Informed by Cuocolo R &amp; Huisman M, "The augmentation myth: AI, economics, and workforce substitution in radiology," Eur Radiol (2026). DOI: 10.1007/s00330-026-12568-7</p>
+      </div>
+    </div>
+
+    <!-- ====== VERSION 3: CHRISTOPH AGTEN (PESSIMISTIC) ====== -->
+    <div class="version-panel" data-version="pessimistic" id="panel-pessimistic">
+      <div class="author-card">
+        <a class="ac-photo-link" href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener"><img class="ac-photo" src="assets/author-christoph.png" alt="Dr. med. Christoph Agten" /></a>
+        <div>
+          <p class="ac-name"><a href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener">Dr. med. Christoph Agten</a></p>
+          <p class="ac-role">Consultant radiologist, musculoskeletal (MSK)</p>
+          <p class="ac-vantage">The pessimistic view</p>
+        </div>
+        <div class="ac-rate">
+          <button class="ac-like" type="button" data-rate="t9003" aria-pressed="false" aria-label="Back this version">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="ac-like-count">0</span>
+          </button>
+          <span class="ac-rate-cap">back this view</span>
+        </div>
+      </div>
+      <div class="jd-block">
+        <p class="jd-h">The structure</p>
+        <h3 class="jd-title">Three tiers, not one job.</h3>
+        <p class="bio">Christoph Agten's version does not describe a single role. It describes a profession that has split into tiers: a scarce, elite on-site subspecialist layer; a mid-tier hands-on procedural layer; and a large, low-paid remote workforce auditing the output of autonomous AI. The three job descriptions below are the three tiers.</p>
+      </div>
+
+      <details class="tier">
+        <summary class="tier-head">
+          <div class="tier-head-text">
+            <p class="jd-h">Tier 1</p>
+            <h3 class="jd-title">Senior Subspecialist &amp; AI Workflow Consultant</h3>
+            <p class="tier-model">Elite tier &middot; 100% on-site &middot; high-scarcity premium base salary</p>
+          </div>
+          <span class="tier-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
+        </summary>
+        <div class="tier-body">
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">01</span>Position summary</h3>
+          <p class="bio">The Tier 1 Senior Subspecialist functions as the ultimate diagnostic adjudicator, clinical consultant, and legal signatory for the hospital's autonomous imaging pipelines. This role focuses exclusively on highly complex, ambiguous subspecialty "edge cases" (primarily advanced MRI and complex CT) that have been flagged by AI as borderline, rare, or high-risk. Tier 1 radiologists provide visible clinical authority in face-to-face multidisciplinary teams and hold ultimate responsibility for the governance of the entire departmental workflow.</p>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">02</span>Core responsibilities</h3>
+          <dl class="metrics">
+            <dt>Ambiguous case adjudication</dt>
+            <dd>Interpret and definitively resolve high-complexity, multi-parametric MRI and advanced CT cases flagged by AI systems as ambiguous, atypical, or borderline.</dd>
+            <dt>On-site multidisciplinary leadership</dt>
+            <dd>Take full ownership of face-to-face Multidisciplinary Team Meetings (MDTMs), acting as the definitive diagnostic voice alongside surgeons, oncologists, and other clinical peers.</dd>
+            <dt>AI pipeline governance</dt>
+            <dd>Hold ultimate legal and clinical responsibility for autonomous, zero-click AI reporting. Direct and review the quality-control data compiled by the remote Radiology Auditor pool.</dd>
+            <dt>Optional intervention</dt>
+            <dd>Perform high-level, advanced image-guided therapeutic procedures as locally required.</dd>
+          </dl>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">03</span>Required qualifications and skills</h3>
+          <ul class="bullets">
+            <li>MD (or equivalent) with Board Certification in Diagnostic Radiology and valid licensure</li>
+            <li>Completed subspecialty fellowship (e.g., musculoskeletal radiology, neuroradiology, pediatric radiology, or oncologic imaging)</li>
+            <li>Demonstrated AI fluency and governance competency, evidenced by recognized credentials in imaging informatics or algorithmic auditing</li>
+            <li>Exceptional communication and high-EQ social skills, with a proven track record of leading discussions and standing one's ground in high-pressure clinical environments</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">04</span>Environment, compensation, and benefits</h3>
+          <dl class="metrics">
+            <dt>Work structure</dt>
+            <dd>100% on-site for clinical collaboration and face-to-face MDT meetings. Normal office hours, with background subspecialty on-call rotation for nights and weekends.</dd>
+            <dt>Compensation</dt>
+            <dd>Exceptionally high, fixed base salary reflecting immense systemic responsibility. Non-performance based.</dd>
+            <dt>Vacation and education</dt>
+            <dd>5&ndash;6 weeks of annual leave; 2 weeks of paid educational leave.</dd>
+          </dl>
+        </div>
+        </div>
+      </details>
+
+      <details class="tier">
+        <summary class="tier-head">
+          <div class="tier-head-text">
+            <p class="jd-h">Tier 2</p>
+            <h3 class="jd-title">Clinical Radiology Specialist</h3>
+            <p class="tier-model">Mid-tier &middot; 100% on-site &middot; market-standard fixed salary</p>
+          </div>
+          <span class="tier-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
+        </summary>
+        <div class="tier-body">
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">01</span>Position summary</h3>
+          <p class="bio">The Clinical Radiology Specialist is the physical engine of the on-site department. Because AI cannot physically manipulate a needle or hold an ultrasound probe, this role focuses entirely on operator-dependent diagnostic imaging and minor image-guided interventions. Clinical Radiology Specialists manage the heavy daily volume of patient-facing clinical workflows, serving as the hands-on execution layer of the hospital, with complex diagnostic escalations routed to Tier 1.</p>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">02</span>Core responsibilities</h3>
+          <dl class="metrics">
+            <dt>High-volume ultrasound operations</dt>
+            <dd>Perform and interpret real-time diagnostic ultrasound examinations (abdominal, pelvic, vascular, small parts).</dd>
+            <dt>Minor image-guided interventions</dt>
+            <dd>Independently perform routine needle-based procedures on-site, including musculoskeletal infiltrations, therapeutic joint injections, superficial biopsies (breast, thyroid, lymph node), and fluid aspirations.</dd>
+            <dt>Front-line emergency and trauma triage</dt>
+            <dd>Provide mandatory, shift-based on-site coverage for nights and weekends, handling initial emergency trauma triage alongside AI decision-support tools.</dd>
+            <dt>MDT support</dt>
+            <dd>Attend local multidisciplinary team meetings to provide procedural and ultrasound-specific perspectives on active patient cases.</dd>
+          </dl>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">03</span>Required qualifications and skills</h3>
+          <ul class="bullets">
+            <li>MD (or equivalent) with Board Certification in Diagnostic Radiology</li>
+            <li>Demonstrated technical competency in interventions: documented logbook proof of proficiency in ultrasound- and CT-guided injections, infiltrations, and core and fine-needle biopsies</li>
+            <li>High manual dexterity: absolute comfort with real-time, operator-dependent diagnostic scanning and needle tracking</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">04</span>Environment, compensation, and benefits</h3>
+          <dl class="metrics">
+            <dt>Work structure</dt>
+            <dd>100% on-site due to the physical nature of ultrasound and needle interventions. Shift-based schedule including regular nights, weekends, and holidays.</dd>
+            <dt>Compensation</dt>
+            <dd>Moderate, market-standard fixed salary driven by a stable but highly populated applicant pool of procedurally-focused radiologists.</dd>
+            <dt>Vacation and education</dt>
+            <dd>5&ndash;6 weeks of annual leave; 2 weeks of paid educational leave, focused on advanced procedural techniques.</dd>
+          </dl>
+        </div>
+        </div>
+      </details>
+
+      <details class="tier">
+        <summary class="tier-head">
+          <div class="tier-head-text">
+            <p class="jd-h">Tier 3</p>
+            <h3 class="jd-title">Radiology Auditor</h3>
+            <p class="tier-model">High-supply tier &middot; 100% remote teleradiology &middot; low salary, just above resident level</p>
+          </div>
+          <span class="tier-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
+        </summary>
+        <div class="tier-body">
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">01</span>Position summary</h3>
+          <p class="bio">The Radiology Auditor forms the massive, distributed human-in-the-loop safety net for the hospital enterprise. Operating entirely via remote teleradiology workstations, this workforce manages the continuous data streams produced by autonomous AI models. Because the global supply of radiologists drastically exceeds the number of elite on-site roles, this position is highly competitive yet commands a very low salary meant strictly for high-volume quality policing.</p>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">02</span>Core responsibilities</h3>
+          <dl class="metrics">
+            <dt>Massive-scale algorithmic auditing</dt>
+            <dd>Conduct continuous, high-speed manual audits of the AI pipeline's "high-confidence normals." Review a randomized daily quota (2&ndash;5%) of autonomous, AI-signed plain films, routine chest CTs, and screening mammograms to catch silent model degradation or drift.</dd>
+            <dt>First-line error logging and triage</dt>
+            <dd>Screen automated system flags and discrepancies. Route verified errors, software hallucinations, or unexpected anatomical variances out of the automated pipeline and escalate them to the appropriate tier.</dd>
+            <dt>Preliminary draft verification</dt>
+            <dd>For non-normal, non-edge cases, review, edit, and approve AI-generated structured preliminary drafts to prepare them for final systemic routing.</dd>
+          </dl>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">03</span>Required qualifications and skills</h3>
+          <ul class="bullets">
+            <li>MD (or equivalent) with basic Board Certification or eligibility in Radiology</li>
+            <li>Basic AI systems literacy: familiarity with DICOMweb viewer platforms, algorithmic error logging, and high-volume structured template workflows</li>
+            <li>High visual endurance: ability to maintain strict diagnostic focus over prolonged periods of high-volume, screen-based data review</li>
+          </ul>
+        </div>
+        <div class="resp-block">
+          <h3 class="subsection"><span class="num">04</span>Environment, compensation, and benefits</h3>
+          <dl class="metrics">
+            <dt>Work structure</dt>
+            <dd>100% remote teleradiology. Flexible, contract-based or shift-based hour models managed via digital worklists. No on-site hospital or patient interaction required.</dd>
+            <dt>Compensation</dt>
+            <dd>Very low, volume-insulated base salary, positioned just slightly above traditional resident and trainee pay scales due to the massive surplus of remote applicants.</dd>
+            <dt>Vacation</dt>
+            <dd>5&ndash;6 weeks of standard unpaid or pro-rated leave depending on regional labor-law baselines.</dd>
+          </dl>
+        </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON ============ -->
+  <section id="compare">
+    <p class="kicker">Side by side</p>
+    <h2>Where the three versions disagree.</h2>
+    <p class="section-intro">More dots mean more of that dimension. Read across each row to see how the three futures differ.</p>
+
+    <div class="compare-scroll">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th><span class="ch-view">Optimistic</span><span class="ch-name">Korchi</span></th>
+            <th><span class="ch-view">Trade-off</span><span class="ch-name">Beger</span></th>
+            <th><span class="ch-view">Pessimistic</span><span class="ch-name">Agten</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>AI autonomy on routine reads</th>
+            <td><span class="pips" data-level="2"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+          </tr>
+          <tr>
+            <th>Radiologist clinical authority</th>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="1"></span></td>
+          </tr>
+          <tr>
+            <th>Direct patient contact</th>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="2"></span></td>
+          </tr>
+          <tr>
+            <th>Interventional and procedural work</th>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="2"></span></td>
+          </tr>
+          <tr>
+            <th>AI governance and oversight load</th>
+            <td><span class="pips" data-level="2"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+          </tr>
+          <tr>
+            <th>Radiologist headcount</th>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="2"></span></td>
+            <td><span class="pips" data-level="3"></span></td>
+          </tr>
+          <tr>
+            <th>Career security</th>
+            <td><span class="pips" data-level="3"></span></td>
+            <td><span class="pips" data-level="2"></span></td>
+            <td><span class="pips" data-level="1"></span></td>
+          </tr>
+          <tr class="vote-row">
+            <th>Back a view</th>
+            <td><button class="ac-like" type="button" data-rate="t9001" aria-pressed="false" aria-label="Back the optimistic view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ac-like-count">0</span></button></td>
+            <td><button class="ac-like" type="button" data-rate="t9002" aria-pressed="false" aria-label="Back the trade-off view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ac-like-count">0</span></button></td>
+            <td><button class="ac-like" type="button" data-rate="t9003" aria-pressed="false" aria-label="Back the pessimistic view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="ac-like-count">0</span></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="col-you-note" id="colYouNote" hidden>Highlighted column = the version your answers matched.</p>
+    <p class="compare-note">All three columns are read from the authors' full texts. Agten's version describes a tiered profession rather than one job, so his column shows the typical radiologist's experience averaged across the three tiers. The tiers themselves are set out in full in his version above.</p>
+  </section>
+
+  <!-- ============ THE PAPER ============ -->
+  <section id="paper">
+    <p class="kicker">The paper</p>
+    <h2>The disagreement, peer reviewed.</h2>
+    <p class="quiz-lead">The three versions on this page were written up as a viewpoint and published open access. If you want the argument in citable form, this is it.</p>
+
+    <div class="paper-card">
+      <p class="pc-journal">European Journal of Radiology Artificial Intelligence &nbsp;&middot;&nbsp; Vol 7, 100118 &nbsp;&middot;&nbsp; 30 July 2026</p>
+      <h3 class="pc-title"><a href="https://doi.org/10.1016/j.ejrai.2026.100118" target="_blank" rel="noopener">Three futures for the diagnostic radiologist: A structured disagreement about what AI actually changes</a></h3>
+      <p class="pc-authors">Jan Beger &middot; Amine Korchi &middot; Christoph A. Agten</p>
+
+      <div class="pc-actions">
+        <a class="pc-btn plausible-event-name=PaperLink plausible-event-method=Card" href="https://doi.org/10.1016/j.ejrai.2026.100118" target="_blank" rel="noopener">
+          Read the paper
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="pc-doi" href="https://doi.org/10.1016/j.ejrai.2026.100118" target="_blank" rel="noopener">10.1016/j.ejrai.2026.100118</a>
+        <span class="pc-oa">Open access &middot; CC BY-NC-ND 4.0</span>
+      </div>
+
+      <p class="pc-cite"><span class="pc-cite-h">Cite as</span>Beger J, Korchi A, Agten CA. Three futures for the diagnostic radiologist: A structured disagreement about what AI actually changes. Eur J Radiol Artif Intell. 2026;7:100118. doi:10.1016/j.ejrai.2026.100118</p>
+    </div>
+  </section>
+
+  <!-- ============ ENVOI / SHARE ============ -->
+  <section id="share" class="envoi">
+    <p class="kicker">From the authors</p>
+    <h2>The paper is out. Tell us which future you would bet on.</h2>
+    <p class="bio">Three versions, three vantage points. The viewpoint is published, but the argument is not settled. We do not agree with each other, and that is the point. The most useful thing you can do is read the one the test gave you, then read the one you disagree with most.</p>
+    <p class="bio">Practising radiologists, educators, technologists, health-system leaders: tell us what is missing, what is wrong, and which version you think will turn out closest to true.</p>
+
+    <div class="debate-cta">
+      <p class="debate-h">Take the argument to LinkedIn.</p>
+      <p class="debate-note">Post where you disagree, tag the three of us, and use <a class="htag" href="https://www.linkedin.com/feed/hashtag/radiologist2035/" target="_blank" rel="noopener">#radiologist2035</a>. We read every post and we reply. The disagreement is the point.</p>
+    </div>
+
+    <hr class="envoi-divider" aria-hidden="true" />
+
+    <div class="share-card-wrap" id="share-buttons">
+      <img src="assets/share-card.png" alt="2035: The Job Description of a Diagnostic Radiologist, in three versions." />
+    </div>
+    <p class="share-card-caption">Sized for LinkedIn, X, and other social posts. Download it below, or just post the link.</p>
+
+    <div class="share-row">
+      <a class="share-pill plausible-event-name=Share plausible-event-method=LinkedIn" data-share="linkedin" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+        <span class="label">LinkedIn</span>
+      </a>
+      <a class="share-pill plausible-event-name=Share plausible-event-method=X" data-share="x" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+      <a class="share-pill plausible-event-name=Share plausible-event-method=Bluesky" data-share="bluesky" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.335 5.144c2.969 2.232 6.16 6.756 7.331 9.188.058.12.117.121.176 0 1.171-2.432 4.362-6.956 7.33-9.188 2.143-1.611 5.617-2.857 5.617 1.106 0 .791-.453 6.645-.719 7.595-.924 3.298-4.287 4.137-7.275 3.628 5.222.89 6.55 3.836 3.681 6.781-5.45 5.594-7.832-1.404-8.442-3.197-.112-.329-.164-.483-.165-.352-.001-.131-.053.023-.165.352-.61 1.793-2.991 8.791-8.442 3.197-2.868-2.945-1.541-5.891 3.681-6.781-2.987.509-6.351-.33-7.275-3.628C.198 12.895-.255 7.041-.255 6.25c0-3.963 3.474-2.717 5.616-1.106z" transform="translate(1 0)"/></svg>
+        Bluesky
+      </a>
+      <a class="share-pill plausible-event-name=Share plausible-event-method=Email" data-share="email" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm9 8.13L3.5 7.4V18h17V7.4l-8.5 5.73zM4.4 7L12 12.12 19.6 7H4.4z"/></svg>
+        Email
+      </a>
+      <button class="share-pill plausible-event-name=Share plausible-event-method=CopyLink" data-share="copy" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.59 13.41a1 1 0 011.42 0 3 3 0 004.24 0l3.54-3.54a3 3 0 00-4.24-4.24L13.93 7.25a1 1 0 11-1.41-1.41l1.62-1.62a5 5 0 117.07 7.07l-3.54 3.54a5 5 0 01-7.07 0 1 1 0 010-1.42zm2.82-2.82a1 1 0 01-1.42 0 3 3 0 00-4.24 0L4.21 14.13a3 3 0 004.24 4.24l1.62-1.62a1 1 0 011.41 1.41l-1.62 1.62a5 5 0 11-7.07-7.07l3.54-3.54a5 5 0 017.07 0 1 1 0 010 1.42z"/></svg>
+        <span class="label">Copy link</span>
+      </button>
+    </div>
+
+    <a class="share-pill download plausible-event-name=Share plausible-event-method=DownloadCard" href="assets/share-card.png" download="radiologist-2035-share-card.png">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 011 1v9.59l3.3-3.3a1 1 0 011.4 1.42l-5 5a1 1 0 01-1.4 0l-5-5a1 1 0 011.4-1.42L11 13.59V4a1 1 0 011-1zM5 19h14a1 1 0 010 2H5a1 1 0 010-2z"/></svg>
+      Download share card (PNG)
+    </a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site">
+    <div class="row">
+      <span><a href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener">Dr. med. Amine Korchi</a>, <a href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener">Jan Beger</a>, and <a href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener">Dr. med. Christoph Agten</a>&nbsp;&middot;&nbsp;2026 &nbsp;&middot;&nbsp; <a href="/impressum/">Impressum</a> &nbsp;&middot;&nbsp; <a href="/datenschutz/">Datenschutz</a></span>
+      <span><a class="htag" href="https://www.linkedin.com/feed/hashtag/radiologist2035/" target="_blank" rel="noopener">#radiologist2035</a></span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="author-dock" id="authorDock">
+  <a class="ad-item" href="https://www.linkedin.com/in/dr-amine-korchi-35485113/" target="_blank" rel="noopener" aria-label="Dr. med. Amine Korchi on LinkedIn">
+    <span class="ad-photo"><img src="assets/author-amine.png" alt="" /></span>
+    <span class="ad-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+  </a>
+  <a class="ad-item" href="https://www.linkedin.com/in/janbeger/" target="_blank" rel="noopener" aria-label="Jan Beger on LinkedIn">
+    <span class="ad-photo"><img src="assets/author-jan.png" alt="" /></span>
+    <span class="ad-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+  </a>
+  <a class="ad-item" href="https://www.linkedin.com/in/cagten/" target="_blank" rel="noopener" aria-label="Dr. med. Christoph Agten on LinkedIn">
+    <span class="ad-photo"><img src="assets/author-christoph.png" alt="" /></span>
+    <span class="ad-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+  </a>
+</div>
+
+<nav class="sticky-flow" id="stickyFlow" aria-label="How to take part">
+  <a class="sf-step" href="#test" aria-label="Step 1: Take the test"><span class="sf-t">Take the test</span><span class="sf-n" aria-hidden="true">1</span></a>
+  <a class="sf-step" href="#versions" aria-label="Step 2: Vote for a view"><span class="sf-t">Vote for a view</span><span class="sf-count" id="sfCount" hidden></span><span class="sf-n" aria-hidden="true">2</span></a>
+  <a class="sf-step" href="https://www.linkedin.com/feed/hashtag/radiologist2035/" target="_blank" rel="noopener" aria-label="Step 3: Debate on LinkedIn"><span class="sf-t">Debate on LinkedIn</span><span class="sf-n" aria-hidden="true">3</span></a>
+  <a class="sf-step" href="#share" aria-label="Step 4: Spread the word"><span class="sf-t">Spread the word</span><span class="sf-n" aria-hidden="true">4</span></a>
+</nav>
+
+<script>
+
+  /* Reading progress bar. */
+  (function(){
+    var bar = document.getElementById('progressBar');
+    if (!bar) return;
+    var ticking = false;
+    function update(){
+      var h = document.documentElement;
+      var top = h.scrollTop || document.body.scrollTop;
+      var max = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      bar.style.width = (max > 0 ? (top / max) * 100 : 0) + '%';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if (!ticking){ requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  })();
+
+  /* Sticky CTA + author dock: show when the hero CTA row scrolls out of view. */
+  (function(){
+    var hero = document.querySelector('.hero-steps');
+    var sticky = document.getElementById('stickyFlow');
+    var dock = document.getElementById('authorDock');
+    if (!hero || !sticky) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          sticky.classList.remove('visible');
+          if (dock) dock.classList.remove('visible');
+        } else {
+          sticky.classList.add('visible');
+          if (dock) dock.classList.add('visible');
+        }
+      });
+    }, { threshold: 0 });
+    io.observe(hero);
+  })();
+
+  /* Comparison matrix: render pips from data-level. */
+  (function(){
+    document.querySelectorAll('.pips').forEach(function(el){
+      var level = parseInt(el.getAttribute('data-level'), 10) || 0;
+      for (var i = 1; i <= 3; i++){
+        var pip = document.createElement('span');
+        pip.className = 'pip' + (i <= level ? ' on' : '');
+        el.appendChild(pip);
+      }
+    });
+  })();
+
+  /* Version switcher + questionnaire engine. */
+  (function(){
+    /* Keys map quiz-outcome buckets to version panels. The 'realist' key is the
+       internal id for Jan Beger's version, positioned on the page as
+       the trade-off view (not labelled "realist" to the reader). */
+    var VERSION_META = {
+      optimistic: {
+        title: "Your outlook leans optimistic.",
+        note: "Amine Korchi's version is the closest match. It is shown below; use the tabs to read the other two."
+      },
+      realist: {
+        title: "Your answers land in the middle, between the optimist and the pessimist.",
+        note: "That is the ground Jan Beger's version covers: the medical imaging IT read. It is shown below; use the tabs to read the other two."
+      },
+      pessimistic: {
+        title: "Your outlook leans pessimistic.",
+        note: "Christoph Agten's version is the closest match. It is shown below; use the tabs to read the other two."
+      }
+    };
+
+    function activateVersion(v){
+      document.querySelectorAll('.version-panel').forEach(function(p){
+        p.classList.toggle('active', p.getAttribute('data-version') === v);
+      });
+      document.querySelectorAll('.vtab').forEach(function(t){
+        t.classList.toggle('active', t.getAttribute('data-version') === v);
+      });
+    }
+
+    /* Tabs */
+    document.querySelectorAll('.vtab').forEach(function(tab){
+      tab.addEventListener('click', function(){
+        activateVersion(tab.getAttribute('data-version'));
+      });
+    });
+
+    /* Questionnaire */
+    var quiz = document.getElementById('quiz');
+    var submitBtn = document.getElementById('quizSubmit');
+    var skipLink = document.getElementById('quizSkip');
+    var hint = document.getElementById('quizHint');
+    var qpFill = document.getElementById('qpFill');
+    var qpLabel = document.getElementById('qpLabel');
+    var banner = document.getElementById('resultBanner');
+    var resultTitle = document.getElementById('resultTitle');
+    var resultNote = document.getElementById('resultNote');
+    if (!quiz) return;
+
+    var questions = quiz.querySelectorAll('.quiz-q');
+    var segAsk = document.getElementById('segAsk');
+    var segSel = document.getElementById('segSel');
+    var segThanks = document.getElementById('segThanks');
+
+    function answeredCount(){
+      var n = 0;
+      questions.forEach(function(q){
+        if (q.querySelector('input:checked')) n++;
+      });
+      return n;
+    }
+
+    quiz.addEventListener('change', function(e){
+      /* highlight the selected option in its group */
+      if (e.target && e.target.name){
+        quiz.querySelectorAll('input[name="' + e.target.name + '"]').forEach(function(inp){
+          inp.closest('.quiz-opt').classList.toggle('selected', inp.checked);
+        });
+      }
+      var done = answeredCount();
+      submitBtn.disabled = done < questions.length;
+      hint.textContent = done < questions.length
+        ? (questions.length - done) + ' of ' + questions.length + ' still to answer.'
+        : 'All set. See your result.';
+      if (qpFill) qpFill.style.width = (done / questions.length * 100) + '%';
+      if (qpLabel) qpLabel.textContent = done + ' of ' + questions.length + ' answered';
+    });
+
+    submitBtn.addEventListener('click', function(){
+      var score = { optimistic: 0, realist: 0, pessimistic: 0 };
+      questions.forEach(function(q){
+        var checked = q.querySelector('input:checked');
+        if (checked) score[checked.value]++;
+      });
+      var max = Math.max(score.optimistic, score.realist, score.pessimistic);
+      var leaders = ['optimistic','realist','pessimistic'].filter(function(k){ return score[k] === max; });
+      var winner = leaders.length === 1 ? leaders[0] : 'realist';
+
+      lastResult = winner;
+      activateVersion(winner);
+      var meta = VERSION_META[winner];
+      resultTitle.textContent = meta.title;
+      resultNote.textContent = meta.note;
+      banner.classList.add('show');
+      banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.plausible) { window.plausible('QuizResult', { props: { outcome: winner } }); }
+
+      /* Auto-vote: the test result counts as a vote for the matched view.
+         On a re-take with a different result, the previous auto-vote is removed. */
+      var QUIZ_TO_ID = { optimistic: 't9001', realist: 't9002', pessimistic: 't9003' };
+      var winnerId = QUIZ_TO_ID[winner];
+      var prevKey = 'r2035.lastQuizVote';
+      var prev = null;
+      try { prev = localStorage.getItem(prevKey); } catch (_) {}
+      if (window.r2035 && window.r2035.castVote){
+        if (prev && prev !== winnerId) window.r2035.castVote(prev, false);
+        window.r2035.castVote(winnerId, true);
+      }
+      try { localStorage.setItem(prevKey, winnerId); } catch (_) {}
+
+      /* ---- v2: compare the reader to the crowd (counts now include this vote) ---- */
+      var c = (window.r2035 && window.r2035.getCounts) ? window.r2035.getCounts() : null;
+      if (c){
+        var t = c.t9001 + c.t9002 + c.t9003;
+        var pct = t ? Math.round((c[winnerId] || 0) / t * 100) : 0;
+        var line;
+        if (pct >= 45)      line = "You're with the majority — " + pct + "% of " + t + " readers landed here too.";
+        else if (pct <= 20) line = "You're in the minority — only " + pct + "% of " + t + " readers see it your way.";
+        else                line = pct + "% of " + t + " readers landed on this version.";
+        resultNote.textContent = line + " Use the tabs to read the one you disagree with most.";
+        lastResultPct = pct;
+      }
+
+      /* ---- v2: reveal the optional segmentation question ---- */
+      if (segAsk){ segAsk.hidden = false; }
+
+      /* ---- v2: highlight the reader's matched column in the comparison table ---- */
+      var COL = { optimistic: 2, realist: 3, pessimistic: 4 }; /* 1 = dimension label */
+      var colN = COL[winner];
+      document.querySelectorAll('table.compare tr').forEach(function(tr){
+        tr.querySelectorAll('.col-you').forEach(function(cell){ cell.classList.remove('col-you'); });
+        var cell = tr.children[colN - 1];
+        if (cell) cell.classList.add('col-you');
+      });
+      var colNote = document.getElementById('colYouNote');
+      if (colNote) colNote.hidden = false;
+    });
+
+    /* ---- v2: segmentation dropdown wiring ---- */
+    if (segSel){
+      segSel.addEventListener('change', function(){
+        var seg = this.value;
+        if (!seg){ if (segThanks) segThanks.hidden = true; return; }
+        var QUIZ_TO_ID2 = { optimistic: 't9001', realist: 't9002', pessimistic: 't9003' };
+        var viewId = QUIZ_TO_ID2[lastResult] || 't9002';
+        if (window.r2035 && window.r2035.recordSegment) window.r2035.recordSegment(viewId, seg);
+        if (window.plausible) { window.plausible('Segment', { props: { seg: seg, view: lastResult } }); }
+        if (segThanks) segThanks.hidden = false;
+      });
+    }
+
+    skipLink.addEventListener('click', function(){
+      document.getElementById('versions').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    /* Result sharing: personalized share copy for the version the visitor was routed to. */
+    var lastResult = 'realist';
+    var lastResultPct = null; /* set after the quiz computes the crowd comparison */
+    var RESULT_SHARE = {
+      optimistic: {
+        long: "I took the test on what the diagnostic radiologist's job becomes by 2035. My answers landed on the optimist's version: the radiologist as an orchestrator of AI.\n\nThree experts wrote three futures. Take the test, then join the debate on LinkedIn with #radiologist2035:\n\n",
+        short: "I took the 2035 radiologist job-description test and landed on the optimist's version. Three experts, three futures. Which one do you get? #radiologist2035"
+      },
+      realist: {
+        long: "I took the test on what the diagnostic radiologist's job becomes by 2035. My answers landed on the trade-off view: a better clinical job, but fewer radiologists.\n\nThree experts wrote three futures. Take the test, then join the debate on LinkedIn with #radiologist2035:\n\n",
+        short: "I took the 2035 radiologist job-description test and landed on the trade-off view. Three experts, three futures. Which one do you get? #radiologist2035"
+      },
+      pessimistic: {
+        long: "I took the test on what the diagnostic radiologist's job becomes by 2035. My answers landed on the pessimist's version: the profession split into tiers, a scarce elite and a low-paid majority.\n\nThree experts wrote three futures. Take the test, then join the debate on LinkedIn with #radiologist2035:\n\n",
+        short: "I took the 2035 radiologist job-description test and landed on the pessimist's version. Three experts, three futures. Which one do you get? #radiologist2035"
+      }
+    };
+    function rCopy(t){
+      if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t).catch(function(){});
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch(e){}
+      return Promise.resolve();
+    }
+    function rFlash(el, msg){
+      var l = el.querySelector('.label'); if (!l) return;
+      var o = l.textContent; l.textContent = msg; el.classList.add('copied');
+      setTimeout(function(){ l.textContent = o; el.classList.remove('copied'); }, 2600);
+    }
+    document.querySelectorAll('[data-rshare]').forEach(function(el){
+      var kind = el.getAttribute('data-rshare');
+      el.addEventListener('click', function(){
+        var copy = RESULT_SHARE[lastResult] || RESULT_SHARE.realist;
+        var url = location.href;
+        /* Bake the live crowd stat into the share text when we have it. */
+        var stat = (lastResultPct != null) ? (" I'm with " + lastResultPct + "% of readers so far.") : "";
+        var shortText = copy.short + stat;
+        var longText = copy.long.replace(/\n\nThree experts/, stat + "\n\nThree experts");
+        if (kind === 'copy') {
+          rCopy(shortText + '\n\n' + url).then(function(){ rFlash(el, 'Copied'); });
+          return;
+        }
+        if (kind === 'x') {
+          window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url)
+            + '&text=' + encodeURIComponent(shortText), '_blank', 'noopener');
+          return;
+        }
+        if (kind === 'linkedin') {
+          rCopy(longText + url);
+          rFlash(el, 'Draft copied. Paste into LinkedIn');
+          window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank', 'noopener');
+          return;
+        }
+      });
+    });
+  })();
+
+  /* Share buttons: each channel gets its own pre-written draft, built from the current URL. */
+  (function(){
+    var SHARE_COPY = {
+      linkedin:
+        "Nobody knows what the radiologist's job becomes. So three people wrote it three ways.\n\n" +
+        "2035: The Job Description of a Diagnostic Radiologist. An optimistic and a pessimistic version from two radiologists, and the trade-off view.\n\n" +
+        "Five questions route you to the future you believe in. Then you compare all three.\n\n" +
+        "Disagree with your result? Bring it to the debate: #radiologist2035\n\n",
+      x:
+        "2035: the diagnostic radiologist's job description, written three ways. An optimist, a pessimist, and the trade-off view. Five questions route you to the future you believe in. Join the debate: #radiologist2035",
+      bluesky:
+        "2035: the diagnostic radiologist's job description, written three ways. An optimist, a pessimist, and the trade-off view. Five questions route you to the future you believe in. Join the debate: #radiologist2035",
+      emailSubject:
+        "Three futures for the radiologist: a 2035 job description in three versions",
+      emailBody:
+        "Hi,\n\n" +
+        "Three people drafted three versions of the diagnostic radiologist's job description for 2035: an optimistic and a pessimistic take from two radiologists, plus the trade-off view. A five-question test routes you to the one that matches your outlook, and you can compare all three.\n\n" +
+        "Worth a look. The three of us are debating it on LinkedIn under #radiologist2035.\n\n"
+    };
+
+    function copyText(text){
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).catch(function(){});
+      }
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch(e){}
+      return Promise.resolve();
+    }
+    function flashLabel(el, msg, ms){
+      var label = el.querySelector('.label');
+      if (!label) return;
+      var orig = label.textContent;
+      label.textContent = msg;
+      el.classList.add('copied');
+      setTimeout(function(){
+        label.textContent = orig;
+        el.classList.remove('copied');
+      }, ms || 2200);
+    }
+    function shareUrl(kind){
+      var url = location.href;
+      var encUrl = encodeURIComponent(url);
+      switch (kind) {
+        case 'linkedin':
+          return 'https://www.linkedin.com/sharing/share-offsite/?url=' + encUrl;
+        case 'x':
+          return 'https://twitter.com/intent/tweet?url=' + encUrl + '&text=' + encodeURIComponent(SHARE_COPY.x);
+        case 'bluesky':
+          return 'https://bsky.app/intent/compose?text=' + encodeURIComponent(SHARE_COPY.bluesky + '\n\n' + url);
+        case 'email':
+          return 'mailto:?subject=' + encodeURIComponent(SHARE_COPY.emailSubject) + '&body=' + encodeURIComponent(SHARE_COPY.emailBody + url);
+        default:
+          return url;
+      }
+    }
+    document.querySelectorAll('[data-share]').forEach(function(el){
+      var kind = el.getAttribute('data-share');
+      if (kind === 'copy') {
+        el.addEventListener('click', function(){
+          copyText(location.href).then(function(){ flashLabel(el, 'Copied', 1800); });
+        });
+        return;
+      }
+      if (kind === 'linkedin') {
+        el.setAttribute('href', shareUrl('linkedin'));
+        el.addEventListener('click', function(){
+          copyText(SHARE_COPY.linkedin + location.href);
+          flashLabel(el, 'Draft copied. Paste into LinkedIn', 3500);
+        });
+        return;
+      }
+      el.setAttribute('href', shareUrl(kind));
+    });
+  })();
+
+  /* Version rating: readers back a version with a like. Counts persist via a Cloudflare Worker. */
+  (function(){
+    var API = "https://royal-sun-5e37.jan-beger.workers.dev";
+    var KEY = "r2035.liked";
+    var IDS = ['t9001', 't9002', 't9003'];
+    var META = {
+      t9001: { label: 'the optimistic view', who: 'Amine Korchi' },
+      t9002: { label: 'the trade-off view',   who: 'Jan Beger' },
+      t9003: { label: 'the pessimistic view', who: 'Christoph Agten' }
+    };
+    var buttons = document.querySelectorAll('.ac-like');
+    var barEl = document.getElementById('resultsBar');
+    var rbTotalEl = document.getElementById('rbTotal');
+    var sfCountEl = document.getElementById('sfCount');
+    var votes = document.querySelectorAll('.ia-vote');
+    if (!buttons.length) return;
+
+    var liked = {};
+    try {
+      (JSON.parse(localStorage.getItem(KEY)) || []).forEach(function(id){ liked[id] = true; });
+    } catch (_) {}
+    function saveLiked(){
+      try { localStorage.setItem(KEY, JSON.stringify(Object.keys(liked))); } catch (_) {}
+    }
+
+    var counts = {};
+    function render(btn){
+      var id = btn.getAttribute('data-rate');
+      btn.setAttribute('aria-pressed', liked[id] ? 'true' : 'false');
+      var c = btn.querySelector('.ac-like-count');
+      if (c) c.textContent = counts[id] || 0;
+    }
+    function total(){ return IDS.reduce(function(s, id){ return s + (counts[id] || 0); }, 0); }
+    function hasVoted(){ return Object.keys(liked).length > 0; }
+    function renderResultsBar(){
+      if (!barEl) return;
+      var t = total();
+      /* Reveal only after the reader has cast a vote, to avoid bandwagon-priming
+         first-time visitors and keep the data clean. */
+      if (t < 1 || !hasVoted()){ barEl.hidden = true; return; }
+      IDS.forEach(function(id){
+        var pct = Math.round((counts[id] || 0) / t * 100);
+        var seg = barEl.querySelector('.rb-seg[data-id="' + id + '"]');
+        if (seg) seg.style.width = pct + '%';
+        var p = barEl.querySelector('[data-pct="' + id + '"]'); if (p) p.textContent = pct + '%';
+        var n = barEl.querySelector('[data-n="' + id + '"]'); if (n) n.textContent = (counts[id] || 0);
+      });
+      if (rbTotalEl) rbTotalEl.textContent = t;
+      barEl.hidden = false;
+    }
+    function renderStickyCount(){
+      if (!sfCountEl) return;
+      var t = total();
+      if (t < 1){ sfCountEl.hidden = true; return; }
+      sfCountEl.textContent = t + ' votes';
+      sfCountEl.hidden = false;
+    }
+    function renderVotes(){
+      votes.forEach(function(v){
+        var n = counts[v.getAttribute('data-vote')] || 0;
+        var nEl = v.querySelector('.ia-vote-n');
+        if (nEl) nEl.textContent = n;
+      });
+    }
+    function renderAll(){ buttons.forEach(render); renderResultsBar(); renderStickyCount(); renderVotes(); }
+    renderAll();
+
+    if (API){
+      fetch(API + '/likes', { mode: 'cors' })
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          Object.keys(data).forEach(function(k){ counts[k] = data[k]; });
+          renderAll();
+        })
+        .catch(function(){});
+    }
+
+    /* Exposed vote API. Used by the quiz to auto-vote the matched view. Idempotent. */
+    function castVote(id, on){
+      if (IDS.indexOf(id) < 0) return;
+      var current = !!liked[id];
+      if (on === current) return;
+      if (on) { liked[id] = true; } else { delete liked[id]; }
+      saveLiked();
+      counts[id] = Math.max(0, (counts[id] || 0) + (on ? 1 : -1));
+      renderAll();
+      if (API){
+        fetch(API + '/increment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: id, action: 'like', op: on ? 'inc' : 'dec' })
+        }).catch(function(){});
+      }
+    }
+    window.r2035 = window.r2035 || {};
+    window.r2035.castVote = castVote;
+    window.r2035.getCounts = function(){
+      return { t9001: counts.t9001 || 0, t9002: counts.t9002 || 0, t9003: counts.t9003 || 0 };
+    };
+    /* Record an optional self-reported segment alongside a view vote.
+       The deployed Worker only accepts numeric IDs (^t\d{1,4}$) and the 'like'
+       action, so each (view x segment) pair maps to a reserved numeric key in a
+       separate block that never collides with the three view totals (t9001-3).
+         t91xx = optimistic segments, t92xx = trade-off, t93xx = pessimistic
+         xx last digit: 1 rad, 2 clin, 3 tech, 4 ind, 5 other
+       Read them back from /likes for cross-tabs (see SEGMENT_KEYS below). */
+    var SEG_NUM = { rad: 1, clin: 2, tech: 3, ind: 4, other: 5 };
+    var SEG_BLOCK = { t9001: '910', t9002: '920', t9003: '930' };
+    window.r2035.segKey = function(viewId, seg){
+      if (!SEG_BLOCK[viewId] || !SEG_NUM[seg]) return null;
+      return 't' + SEG_BLOCK[viewId] + SEG_NUM[seg];
+    };
+    window.r2035.recordSegment = function(viewId, seg){
+      var key = window.r2035.segKey(viewId, seg);
+      if (!key || !API) return;
+      fetch(API + '/increment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: key, action: 'like', op: 'inc' })
+      }).catch(function(){});
+    };
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-rate');
+        var on = !liked[id];
+        if (on) { liked[id] = true; } else { delete liked[id]; }
+        saveLiked();
+        counts[id] = Math.max(0, (counts[id] || 0) + (on ? 1 : -1));
+        renderAll();
+        btn.classList.remove('is-pulsing');
+        void btn.offsetWidth;
+        if (on) btn.classList.add('is-pulsing');
+        if (window.plausible) { window.plausible(on ? 'BackVersion' : 'UnbackVersion'); }
+        if (API){
+          fetch(API + '/increment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: id, action: 'like', op: on ? 'inc' : 'dec' })
+          }).catch(function(){});
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

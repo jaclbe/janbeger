@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Beger;Jan;;;
+FN:Jan Beger
+TITLE:Global Head of AI Advocacy
+ORG:GE HealthCare
+EMAIL;TYPE=INTERNET,WORK:jan.beger@gehealthcare.com
+TEL;TYPE=CELL,VOICE,PREF:+49 174 3428857
+ADR;TYPE=WORK:;;Peter-Müller-Str. 24-26;Düsseldorf;;40468;Germany
+URL:https://janbeger.ai
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/janbeger
+URL;TYPE=WORK:https://www.gehealthcare.com
+END:VCARD

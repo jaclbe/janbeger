@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f2f1ed" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="apple-mobile-web-app-title" content="Jan Beger" />
+<title>Press kit · Jan Beger</title>
+<meta name="description" content="Bio and headshots for media, event organizers, and partners." />
+<link rel="preload" href="/assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/fonts/fonts.css" />
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  html{ background:var(--bg); }
+  body{
+    background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  ::selection{ background:var(--accent); color:var(--paper-ink); }
+  img{ display:block; max-width:100%; height:auto; }
+  a{ color:var(--ink); transition:color .15s ease, border-color .15s ease, background-color .15s ease; }
+  a:hover{ color:var(--accent-hover); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  .wrap{ max-width:var(--wrap,900px); margin:0 auto; padding:0 clamp(20px,4vw,40px); }
+  nav.top{ padding:24px 0 0; }
+  nav.top a.back{
+    display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+    border:1px solid rgba(244,241,234,0.35); border-radius:999px; color:var(--ink); text-decoration:none;
+  }
+  nav.top a.back:hover{ border-color:var(--accent); color:var(--accent); }
+  nav.top a.back svg{ width:18px; height:18px; }
+  header.kit{ padding:56px 0 40px; border-bottom:1px solid var(--rule); margin-bottom:8px; }
+  .kicker{ margin:0 0 16px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); }
+  h1{ margin:0; font-family:var(--display); font-weight:400; text-transform:uppercase; font-size:clamp(52px,9vw,112px); line-height:.9; letter-spacing:.002em; }
+  .lede{ margin:24px 0 0; max-width:640px; font-size:19px; line-height:1.55; color:var(--ink-2); }
+  .lede strong{ color:var(--ink); }
+  footer.kit{ margin-top:80px; padding:28px 0 40px; border-top:1px solid var(--rule); font-size:14px; color:var(--ink-3); }
+  footer.kit a{ color:var(--ink-2); text-decoration:none; }
+  footer.kit a:hover{ color:var(--accent); }
+  :root{ --wrap:1040px; }
+  section{ padding:64px 0 0; }
+  h2{ margin:0 0 24px; font-family:var(--display); font-weight:400; text-transform:uppercase; font-size:clamp(40px,5vw,64px); line-height:.95; }
+  .bio-text{ max-width:720px; }
+  .bio-text p{ margin:0 0 16px; font-size:18px; color:var(--ink-2); }
+  .bio-text p:last-child{ margin-bottom:0; }
+  .bio-text strong{ color:var(--ink); }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px;
+    font-weight:700; font-size:16px; text-decoration:none;
+  }
+  .btn-primary{ background:var(--accent); color:var(--paper-ink); }
+  .btn-primary:hover{ background:var(--accent-hover); color:var(--paper-ink); }
+  .btn-ghost{ border:1px solid rgba(244,241,234,0.4); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+  .btn svg{ width:18px; height:18px; fill:currentColor; }
+  .bio-download{ margin-top:28px; }
+  .photo-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  @media (max-width:640px){ .photo-grid{ grid-template-columns:1fr; } }
+  figure.shot{ margin:0; background:var(--card); }
+  figure.shot img{ width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 25%; }
+  figure.shot figcaption{ display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 18px; font-size:14px; color:var(--ink-3); }
+  figure.shot .dl{
+    display:inline-flex; align-items:center; min-height:44px; padding:0 16px; border-radius:999px;
+    border:1px solid rgba(244,241,234,0.4); color:var(--ink); font-weight:700; text-decoration:none;
+  }
+  figure.shot .dl:hover{ border-color:var(--accent); color:var(--accent); }
+  .photo-note{ margin:16px 0 0; font-size:14px; color:var(--ink-3); }
+  dl.facts{ margin:0; border-top:1px solid var(--rule); }
+  dl.facts > div{ display:grid; grid-template-columns:180px minmax(0,1fr); gap:6px 24px; padding:16px 0; border-bottom:1px solid var(--rule); }
+  @media (max-width:560px){ dl.facts > div{ grid-template-columns:1fr; } }
+  dl.facts dt{ font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); padding-top:3px; }
+  dl.facts dd{ margin:0; font-size:18px; }
+  dl.facts dd a{ color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  dl.facts dd a:hover{ color:var(--accent-hover); }
+
+  /* ============ ARENA THEME (matches homepage, 2026-11-02) ============ */
+  :root{
+    --bg:#f2f1ed; --bg-2:#ffffff; --card:#ffffff;
+    --ink:#16171a; --ink-2:#3c3e44; --ink-3:#5b5d63;
+    --paper:#f2f1ed; --paper-ink:#16171a;
+    --rule:rgba(22,23,26,0.14); --line-strong:rgba(22,23,26,0.4);
+    --accent:#6d28d9; --accent-hover:#5b21b6; --orange:#7c3aed; --night:#0d0e10;
+    --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --display:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  html{ background:var(--bg); }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:18px; line-height:1.62; }
+  ::selection{ background:var(--orange); color:#fff; }
+  :focus-visible{ outline-color:var(--orange); }
+  h1, h2, .name, .events .when{ font-family:var(--display); text-transform:none; letter-spacing:-0.005em; }
+  h1{ font-weight:300; font-size:clamp(48px,7vw,92px); line-height:1.0; text-wrap:balance; }
+  h2{ font-weight:400; font-size:clamp(34px,3.6vw,48px); line-height:1.08; }
+  .kicker, .hint, .detail-row .label, dl.facts dt{ text-transform:none; letter-spacing:0; }
+  .kicker{ display:flex; align-items:center; gap:14px; font-size:15px; font-weight:700; color:var(--accent); }
+  .kicker::before{ content:""; width:40px; height:3px; background:var(--orange); }
+  .lede, .standfirst{ color:var(--ink-2); font-size:20px; }
+  a:hover{ color:var(--accent); }
+  /* back buttons */
+  nav.top a.back, .back{ border:1.5px solid var(--line-strong); color:var(--ink); }
+  nav.top a.back:hover, .back:hover{ border-color:var(--orange); color:var(--accent); }
+  /* buttons */
+  .btn-primary{ background:var(--orange); color:#fff; }
+  .btn-primary:hover{ background:#6d28d9; color:#fff; }
+  .btn-ghost, figure.shot .dl, .formats li{ border:1.5px solid var(--line-strong); color:var(--ink); }
+  /* faq */
+  .faq-item summary{ font-family:var(--display); font-weight:500; font-size:clamp(24px,2.6vw,30px); line-height:1.2; }
+  .faq-item summary::after{ border-color:var(--line-strong); color:var(--accent); font-family:var(--sans); }
+  .faq-a{ font-size:18px; }
+  /* press */
+  figure.shot{ background:var(--card); border-radius:14px; overflow:hidden; }
+  figure.shot figcaption{ font-size:15px; color:var(--ink-2); }
+  dl.facts dt{ font-size:15px; color:var(--ink-3); }
+  .photo-note{ font-size:15px; color:var(--ink-3); }
+  /* speaker page */
+  .events .when{ font-size:30px; font-weight:400; line-height:1.1; }
+  .events li:first-child .when{ color:var(--accent); }
+  .events .what .where{ color:var(--ink-2); }
+  ul.topics .t{ font-family:var(--display); font-weight:500; font-size:28px; line-height:1.15; }
+  .endcard{ background:var(--night); color:#f5f3ef; border-radius:20px; }
+  .endcard h2, .endcard p{ color:#f5f3ef; }
+  .endcard h2{ font-weight:300; }
+  .endcard a{ color:#fff; text-decoration-color:var(--orange); }
+  .endcard a:hover{ color:#c4b5fd; }
+  /* card */
+  .avatar{ border-color:var(--orange); }
+  .name{ font-weight:300; font-size:clamp(48px,13vw,68px); line-height:1.0; }
+  .name .accent{ color:var(--accent); font-style:italic; }
+  .events .what .name{ font-family:var(--sans); font-weight:700; letter-spacing:0; }
+  .role{ font-size:16px; }
+  .qr-wrap{ box-shadow:0 0 0 1px var(--rule), 0 18px 40px rgba(22,23,26,0.08); }
+  .hint{ font-size:15px; color:var(--accent); }
+  .detail-row .label{ font-size:14px; color:var(--ink-3); }
+  .detail-row a{ font-size:17px; }
+  /* footers */
+  footer.kit, footer{ font-size:15px; color:var(--ink-3); }
+  footer.kit a, footer a{ color:var(--ink-2); }
+
+  /* ============ TYPE v3 (2026-11-02 12:35): Sora display, no italic accents ============ */
+  :root{ --display:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif; }
+  h1, h2, .name, .events .when{ font-family:var(--display); font-weight:600; letter-spacing:-0.03em; }
+  h1{ font-size:clamp(38px,5.4vw,70px); line-height:1.06; }
+  h2{ font-size:clamp(28px,2.9vw,38px); line-height:1.12; }
+  .faq-item summary{ font-family:var(--display); font-weight:600; font-size:clamp(19px,2vw,23px); letter-spacing:-0.02em; }
+  .events .when{ font-size:23px; }
+  ul.topics .t{ font-family:var(--display); font-weight:600; font-size:22px; letter-spacing:-0.02em; }
+  .endcard h2{ font-weight:600; }
+  .name{ font-size:clamp(38px,10vw,52px); }
+  .name .accent{ font-style:normal; color:var(--accent); }
+
+  /* press kit: copy the bio (2026-11-02) */
+  .bio-actions{ display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:8px; }
+  .bio-actions .bio-download{ margin:0; }
+  .bio-copy{ display:inline-flex; align-items:center; gap:8px; height:48px; padding:0 22px; border-radius:999px; border:1.5px solid rgba(22,23,26,0.35); background:transparent; color:var(--ink); font:700 15px/1 var(--sans); cursor:pointer; }
+  .bio-copy:hover{ border-color:var(--orange); color:var(--orange); }
+  .bio-copy svg{ width:16px; height:16px; }
+  .bio-copy.done{ border-color:var(--orange); color:var(--orange); }
+</style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-Xg3IjPylJhQx44exYq6mF.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<link rel="stylesheet" href="/assets/subpage.css" />
+</head>
+<body class="v4">
+<nav class="site" aria-label="Main">
+  <div class="row">
+    <a class="wordmark" href="/">Jan Beger</a>
+    <div class="links"><a href="/#speaking-track">Speaking</a><a href="/#events">Tour dates</a><a href="/#writing-track">Writing</a><a href="/#projects-track">Projects</a></div>
+    <a class="nav-book" href="/#speaking">Book Jan</a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open="Open menu" data-close="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="/#speaking-track">Speaking</a>
+    <a href="/#events">Tour dates</a>
+    <a href="/#writing-track">Writing</a>
+    <a href="/#projects-track">Projects</a>
+    <a class="mm-book" href="/#speaking">Book Jan</a>
+  </div>
+</nav>
+<header class="ph">
+  <div class="ph-inner">
+    <p class="ph-kicker">Press kit</p>
+    <h1>Bio &amp; headshots</h1>
+    <p class="ph-lede">Everything media, event organizers, and partners need. <strong>Cleared for use, no need to ask.</strong> Photos download at full resolution; the bio is below as text and as a PDF.</p>
+  </div>
+</header>
+<main class="page">
+  <div class="wrap">
+
+  <section>
+    <h2>Bio</h2>
+    <div class="bio-text">
+      <p>Jan Beger is Global Head of AI Advocacy at GE HealthCare and Executive Director of HelloAI, where he helps healthcare professionals turn AI from theory into practical clinical impact. With more than 20 years of experience in healthcare informatics, medical imaging, and AI, he focuses on the real challenge of healthcare AI: not the algorithms, but trust, workflow, adoption, and patient benefit. Since 2018, HelloAI has trained more than 10,000 healthcare professionals from over 100 countries.</p>
+      <p>Jan is known for translating complex AI developments into clear, actionable insights for clinicians and health system leaders. Every day he summarizes a new AI research paper on LinkedIn for more than 92,000 healthcare professionals, and each month his LinkedIn newsletter, Interesting Reads, brings the ten papers that mattered to more than 45,000 subscribers.</p>
+      <p>He also founded Edison Accelerator, a collaboration platform connecting providers, startups, and industry leaders to accelerate AI adoption in healthcare, and GR4AI, a non-profit book project that helps children aged seven to twelve understand artificial intelligence and how it shapes the world around them.</p>
+      <p>On stage, Jan speaks about how AI can support clinicians, improve workflows, and make healthcare more human while helping organizations move from AI hype to real-world implementation.</p>
+    </div>
+    <div class="bio-actions">
+    <a class="btn btn-primary bio-download" href="press/2026_Jan_Beger_Bio.pdf" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+      Download bio (PDF)
+    </a>
+    <button type="button" class="bio-copy" data-copy="full" data-label="Copy bio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy bio</span></button><button type="button" class="bio-copy" data-copy="short" data-label="Copy short bio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy short bio</span></button>
+    <span id="bio-copy-status" class="visually-hidden" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Headshots</h2>
+    <div class="photo-grid">
+      <figure class="shot">
+        <img src="press/2026_Jan_Beger_1.jpg" alt="Jan Beger press headshot, portrait" />
+        <figcaption>
+          <span>Headshot 1 &middot; 1592&times;944</span>
+          <a class="dl" href="press/2026_Jan_Beger_1.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="press/2026_Jan_Beger_2.jpg" alt="Jan Beger press headshot, three-quarter" />
+        <figcaption>
+          <span>Headshot 2 &middot; 1402&times;1122</span>
+          <a class="dl" href="press/2026_Jan_Beger_2.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="photo-note">Photo credit not required. Please don't crop across the face or recolor.</p>
+  </section>
+
+  <section>
+    <h2>Essentials</h2>
+    <dl class="facts">
+      <div><dt>Name</dt><dd>Jan Beger</dd></div>
+      <div><dt>Title</dt><dd>Global Head of AI Advocacy, GE HealthCare &middot; Executive Director, HelloAI</dd></div>
+      <div><dt>Based in</dt><dd>Germany</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:team@janbeger.ai">team@janbeger.ai</a></dd></div>
+      <div><dt>Website</dt><dd><a href="https://janbeger.ai">janbeger.ai</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/janbeger" target="_blank" rel="noopener">linkedin.com/in/janbeger</a></dd></div>
+    </dl>
+  </section>
+
+</div>
+</main>
+<footer class="site">
+    <div class="row">
+      <div class="foot-main"><p class="foot-cta"><a href="/#speaking">Book Jan</a> or write to <a href="mailto:team@janbeger.ai">team@janbeger.ai</a></p><p class="foot-meta">&copy; <span class="yr" id="yr">2026</span> Jan Beger &nbsp;&middot;&nbsp; Updated November 2026 &nbsp;&middot;&nbsp; <a href="/faq.html">FAQ</a> &nbsp;&middot;&nbsp; <a href="/press.html">Press</a> &nbsp;&middot;&nbsp; <a href="/impressum/">Impressum</a> &nbsp;&middot;&nbsp; <a href="/datenschutz/">Datenschutz</a> &nbsp;&middot;&nbsp; <a href="/ki-keynote-speaker-gesundheitswesen/" hreflang="de" lang="de">Deutsch</a></p></div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/janbeger" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="https://janbeger.substack.com/" target="_blank" rel="noopener" aria-label="Substack"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+        <a href="https://bsky.app/profile/janbeger.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.581-7.386 2.005-2.83 7.078 5.013 5.59 6.87-1.197 7.823-4.643.953 3.446 2.05 10.061 7.733 4.643 4.267-4.073.792-5.497-3.119-6.078 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.79.624-6.48 0-.688-.139-1.86-.902-2.202-.659-.298-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg></a>
+        <a href="https://www.instagram.com/jan.beger/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+/* press kit: copy the full or the short bio as plain text */
+(function(){
+  var paras = [].slice.call(document.querySelectorAll('.bio-text p')).map(function(p){ return p.textContent.replace(/\s+/g,' ').trim(); });
+  var live = document.getElementById('bio-copy-status');
+  function copy(text, btn){
+    function ok(){ var l = btn.getAttribute('data-label'); btn.classList.add('done'); btn.lastChild.textContent = 'Copied'; if (live) live.textContent = 'Bio copied to the clipboard.'; setTimeout(function(){ btn.classList.remove('done'); btn.lastChild.textContent = l; }, 1800); }
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok, fallback); } else { fallback(); }
+    function fallback(){ var t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly',''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); ok(); } catch (e) {} document.body.removeChild(t); }
+  }
+  document.querySelectorAll('.bio-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){ copy(btn.getAttribute('data-copy') === 'short' ? paras[0] : paras.join('\n\n'), btn); });
+  });
+})();
+</script>
+<script src="/assets/subpage.js" defer></script>
+</body>
+</html>

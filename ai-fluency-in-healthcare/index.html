@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="apple-mobile-web-app-title" content="Jan Beger" />
+<title>What Is AI Fluency in Healthcare? · Jan Beger</title>
+<meta name="description" content="AI fluency in healthcare is the ability to apply, judge, and communicate AI-supported decisions in real clinical work. Here is what it means, how it differs from AI literacy, and how clinicians and health systems actually build it." />
+<link rel="canonical" href="https://janbeger.ai/ai-fluency-in-healthcare/" />
+
+<meta property="og:title" content="What Is AI Fluency in Healthcare?" />
+<meta property="og:description" content="Fluency is not knowing how a model works. It is knowing when to trust it, when to override it, and who owns the decision. A practitioner's definition." />
+<meta property="og:url" content="https://janbeger.ai/ai-fluency-in-healthcare/" />
+<meta property="og:image" content="https://janbeger.ai/assets/og-card-2026.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Jan Beger on stage: Our conversations must move beyond algorithms." />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="What Is AI Fluency in Healthcare?" />
+<meta name="twitter:description" content="Fluency is not knowing how a model works. It is knowing when to trust it, when to override it, and who owns the decision." />
+<meta name="twitter:image" content="https://janbeger.ai/assets/og-card-2026.jpg" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Is AI Fluency in Healthcare?",
+  "alternativeHeadline": "AI Fluency in Healthcare: A Practitioner's Definition",
+  "description": "AI fluency in healthcare is the ability to apply, judge, and communicate AI-supported decisions in real clinical work. How it differs from AI literacy, and how clinicians and health systems build it.",
+  "datePublished": "2026-06-16",
+  "dateModified": "2026-06-16",
+  "inLanguage": "en",
+  "image": "https://janbeger.ai/assets/og-card.jpg",
+  "url": "https://janbeger.ai/ai-fluency-in-healthcare/",
+  "mainEntityOfPage": "https://janbeger.ai/ai-fluency-in-healthcare/",
+  "about": [
+    "AI fluency in healthcare",
+    "AI literacy in healthcare",
+    "clinical AI adoption",
+    "healthcare AI education"
+  ],
+  "author": {
+    "@type": "Person",
+    "@id": "https://janbeger.ai/#jan",
+    "name": "Jan Beger",
+    "url": "https://janbeger.ai/",
+    "jobTitle": "Global Head of AI Advocacy, GE HealthCare",
+    "sameAs": [
+      "https://www.linkedin.com/in/janbeger",
+      "https://janbeger.substack.com",
+      "https://research.gehealthcare.com/about/"
+    ]
+  },
+  "publisher": { "@id": "https://janbeger.ai/#jan" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI fluency in healthcare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI fluency in healthcare is the ability to apply, judge, and communicate AI-supported decisions in real clinical work. A fluent clinician can use AI in a real task, judge when its output should be trusted or overridden, and explain how AI shaped the decision to a colleague or a patient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AI fluency different from AI literacy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI literacy is understanding the concepts: what a model is, what training data does, why bias happens. Fluency is the working skill of applying that understanding at the point of care, under time pressure, with a patient in front of you. Literacy is knowing the vocabulary. Fluency is holding the conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do clinicians build AI fluency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clinicians build fluency by using real tools on real cases, learning each tool's failure modes, practicing when to override the output, and working inside clear rules about who owns the final decision. Lectures alone do not produce fluency. Supervised practice does."
+      }
+    }
+  ]
+}
+</script>
+
+
+<link rel="preload" href="/assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/fonts/fonts.css" />
+<style>
+  :root{
+    --bg:     #faf7f1;
+    --bg-2:   #f1ebe0;
+    --ink:    #221c17;
+    --ink-2:  #736a60;
+    --ink-3:  #8b8278;
+    --rule:   rgba(34,28,23,0.09);
+    --accent: #7c3aed;
+    --sans:   "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --display:"Space Grotesk", "Inter", system-ui, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:48px 24px 96px;
+  }
+  .back{
+    display:inline-block;
+    margin-bottom:40px;
+    color:var(--ink-2);
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+  }
+  .back:hover{ color:var(--accent); }
+  .kicker{
+    font-family:var(--display);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(30px,5vw,44px);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    margin:0 0 18px;
+  }
+  .standfirst{
+    font-size:21px;
+    line-height:1.55;
+    color:var(--ink-2);
+    margin:0 0 14px;
+  }
+  .byline{
+    font-size:15px;
+    color:var(--ink-3);
+    margin:0 0 40px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--rule);
+  }
+  .byline a{ color:var(--ink-2); }
+  h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:25px;
+    line-height:1.2;
+    letter-spacing:-0.01em;
+    margin:48px 0 14px;
+  }
+  p{ margin:0 0 20px; }
+  a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+  strong{ font-weight:600; }
+  .levels{
+    margin:24px 0 8px;
+    padding:0;
+    list-style:none;
+    border-top:1px solid var(--rule);
+  }
+  .levels li{
+    padding:18px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .levels .lab{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:17px;
+    color:var(--ink);
+    display:block;
+    margin-bottom:4px;
+  }
+  .levels .lab span{ color:var(--accent); }
+  .levels p{ margin:0; font-size:18px; color:var(--ink-2); }
+  .endcard{
+    margin-top:56px;
+    padding:28px 28px 30px;
+    background:var(--bg-2);
+    border-radius:14px;
+  }
+  .endcard h2{ margin-top:0; }
+  .endcard p{ margin-bottom:0; color:var(--ink-2); font-size:18px; }
+  .endcard a{ font-weight:600; }
+  footer{
+    margin-top:64px;
+    padding-top:28px;
+    border-top:1px solid var(--rule);
+    font-size:14px;
+    color:var(--ink-3);
+  }
+  footer a{ color:var(--ink-2); text-decoration:none; }
+  footer a:hover{ color:var(--accent); }
+
+  /* ============ ARENA THEME (matches homepage, 2026-11-02) ============ */
+  :root{
+    --bg:#f2f1ed; --bg-2:#ffffff; --card:#ffffff;
+    --ink:#16171a; --ink-2:#3c3e44; --ink-3:#5b5d63;
+    --paper:#f2f1ed; --paper-ink:#16171a;
+    --rule:rgba(22,23,26,0.14); --line-strong:rgba(22,23,26,0.4);
+    --accent:#6d28d9; --accent-hover:#5b21b6; --orange:#7c3aed; --night:#0d0e10;
+    --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --display:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  html{ background:var(--bg); }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:18px; line-height:1.62; }
+  ::selection{ background:var(--orange); color:#fff; }
+  :focus-visible{ outline-color:var(--orange); }
+  h1, h2, .name, .events .when{ font-family:var(--display); text-transform:none; letter-spacing:-0.005em; }
+  h1{ font-weight:300; font-size:clamp(48px,7vw,92px); line-height:1.0; text-wrap:balance; }
+  h2{ font-weight:400; font-size:clamp(34px,3.6vw,48px); line-height:1.08; }
+  .kicker, .hint, .detail-row .label, dl.facts dt{ text-transform:none; letter-spacing:0; }
+  .kicker{ display:flex; align-items:center; gap:14px; font-size:15px; font-weight:700; color:var(--accent); }
+  .kicker::before{ content:""; width:40px; height:3px; background:var(--orange); }
+  .lede, .standfirst{ color:var(--ink-2); font-size:20px; }
+  a:hover{ color:var(--accent); }
+  /* back buttons */
+  nav.top a.back, .back{ border:1.5px solid var(--line-strong); color:var(--ink); }
+  nav.top a.back:hover, .back:hover{ border-color:var(--orange); color:var(--accent); }
+  /* buttons */
+  .btn-primary{ background:var(--orange); color:#fff; }
+  .btn-primary:hover{ background:#6d28d9; color:#fff; }
+  .btn-ghost, figure.shot .dl, .formats li{ border:1.5px solid var(--line-strong); color:var(--ink); }
+  /* faq */
+  .faq-item summary{ font-family:var(--display); font-weight:500; font-size:clamp(24px,2.6vw,30px); line-height:1.2; }
+  .faq-item summary::after{ border-color:var(--line-strong); color:var(--accent); font-family:var(--sans); }
+  .faq-a{ font-size:18px; }
+  /* press */
+  figure.shot{ background:var(--card); border-radius:14px; overflow:hidden; }
+  figure.shot figcaption{ font-size:15px; color:var(--ink-2); }
+  dl.facts dt{ font-size:15px; color:var(--ink-3); }
+  .photo-note{ font-size:15px; color:var(--ink-3); }
+  /* speaker page */
+  .events .when{ font-size:30px; font-weight:400; line-height:1.1; }
+  .events li:first-child .when{ color:var(--accent); }
+  .events .what .where{ color:var(--ink-2); }
+  ul.topics .t{ font-family:var(--display); font-weight:500; font-size:28px; line-height:1.15; }
+  .endcard{ background:var(--night); color:#f5f3ef; border-radius:20px; }
+  .endcard h2, .endcard p{ color:#f5f3ef; }
+  .endcard h2{ font-weight:300; }
+  .endcard a{ color:#fff; text-decoration-color:var(--orange); }
+  .endcard a:hover{ color:#c4b5fd; }
+  /* card */
+  .avatar{ border-color:var(--orange); }
+  .name{ font-weight:300; font-size:clamp(48px,13vw,68px); line-height:1.0; }
+  .name .accent{ color:var(--accent); font-style:italic; }
+  .events .what .name{ font-family:var(--sans); font-weight:700; letter-spacing:0; }
+  .role{ font-size:16px; }
+  .qr-wrap{ box-shadow:0 0 0 1px var(--rule), 0 18px 40px rgba(22,23,26,0.08); }
+  .hint{ font-size:15px; color:var(--accent); }
+  .detail-row .label{ font-size:14px; color:var(--ink-3); }
+  .detail-row a{ font-size:17px; }
+  /* footers */
+  footer.kit, footer{ font-size:15px; color:var(--ink-3); }
+  footer.kit a, footer a{ color:var(--ink-2); }
+
+  /* ============ TYPE v3 (2026-11-02 12:35): Sora display, no italic accents ============ */
+  :root{ --display:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif; }
+  h1, h2, .name, .events .when{ font-family:var(--display); font-weight:600; letter-spacing:-0.03em; }
+  h1{ font-size:clamp(38px,5.4vw,70px); line-height:1.06; }
+  h2{ font-size:clamp(28px,2.9vw,38px); line-height:1.12; }
+  .faq-item summary{ font-family:var(--display); font-weight:600; font-size:clamp(19px,2vw,23px); letter-spacing:-0.02em; }
+  .events .when{ font-size:23px; }
+  ul.topics .t{ font-family:var(--display); font-weight:600; font-size:22px; letter-spacing:-0.02em; }
+  .endcard h2{ font-weight:600; }
+  .name{ font-size:clamp(38px,10vw,52px); }
+  .name .accent{ font-style:normal; color:var(--accent); }
+
+  /* ============ AI FLUENCY page fit (2026-11-02) ============ */
+  .wrap{ max-width: 760px; }
+  .back{ display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; }
+  h1{ font-size: clamp(36px, 5vw, 60px); }
+  .wrap > h2{ font-size: clamp(24px, 2.4vw, 30px); margin-top: 56px; }
+  .standfirst{ font-size: 21px; color: var(--ink-2); }
+  .byline{ font-size: 15px; color: var(--ink-3); border-bottom-color: var(--rule); }
+  .levels{ border-top-color: var(--rule); }
+  .levels li{ border-bottom-color: var(--rule); }
+  .levels .lab{ font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
+  .levels .lab span{ color: var(--ink-3); }
+  .levels p{ color: var(--ink-2); }
+  .endcard{ padding: 36px 36px 38px; }
+  .endcard h2{ font-size: clamp(26px, 2.6vw, 34px); }
+  .endcard p{ color: #dcd9d3; }
+</style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-Xg3IjPylJhQx44exYq6mF.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<link rel="stylesheet" href="/assets/subpage.css" />
+</head>
+<body class="v4">
+<nav class="site" aria-label="Main">
+  <div class="row">
+    <a class="wordmark" href="/">Jan Beger</a>
+    <div class="links"><a href="/#speaking-track">Speaking</a><a href="/#events">Tour dates</a><a href="/#writing-track">Writing</a><a href="/#projects-track">Projects</a></div>
+    <a class="nav-book" href="/#speaking">Book Jan</a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open="Open menu" data-close="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="/#speaking-track">Speaking</a>
+    <a href="/#events">Tour dates</a>
+    <a href="/#writing-track">Writing</a>
+    <a href="/#projects-track">Projects</a>
+    <a class="mm-book" href="/#speaking">Book Jan</a>
+  </div>
+</nav>
+<header class="ph">
+  <div class="ph-inner">
+    <p class="ph-kicker">Healthcare AI</p>
+    <h1>What is AI fluency in healthcare?</h1>
+    <p class="ph-lede">AI fluency in healthcare is the ability to apply, judge, and communicate AI-supported decisions in real clinical work. Not knowing how the model works under the hood. Knowing when to trust it, when to override it, and how to explain that to a colleague or a patient.</p>
+    <p class="ph-byline">By <a href="https://janbeger.ai/">Jan Beger</a>, Global Head of AI Advocacy at GE HealthCare. Updated June 2026.</p>
+  </div>
+</header>
+<main class="page">
+  <article class="wrap">
+
+    <p>Most hospitals are now buying AI faster than their staff can use it well. A radiology department signs for a triage tool, a sepsis model goes live in the EHR, an ambient scribe lands in every exam room, and somewhere in the rollout deck there is a line about "training." The training is usually a slide on how the tool works and a click-through on the interface. That produces awareness. It does not produce fluency, and the gap between the two is where patient risk lives.</p>
+
+    <p>So let me define the term properly, because it gets used loosely and that looseness has a cost.</p>
+
+    <h2>Fluency is a working skill, not a body of knowledge</h2>
+
+    <p>A clinician is fluent in AI when they can take a model's output and do three things without stopping to think about the machinery. Apply it, meaning use AI in a real task: prioritizing a worklist, drafting a note, flagging a risk. Judge it, meaning know when to trust the output, when to question it, and when to override it. Communicate it, meaning explain how AI shaped the decision to a colleague or a patient. Apply, judge, communicate. That is the framework we use in <a href="https://helloaiprofessional.com/context-preview">HelloAI</a>, and it holds up because it describes what fluency does, not what it knows.</p>
+
+    <p>Fluency shows up in the moment of care, under time pressure, with imperfect information, which is exactly the condition under which abstract knowledge tends to evaporate.</p>
+
+    <p>Think about how we use the word fluent for language. A fluent speaker is not someone who can recite grammar rules. It is someone who holds a conversation, catches a misunderstanding, and repairs it in real time. AI fluency works the same way. You are not fluent because you can explain what a neural network is. You are fluent because you can sit in front of a sepsis alert and know, from experience with that tool, that it fires early on dehydrated post-surgical patients and should be read with that in mind.</p>
+
+    <h2>How AI fluency differs from AI literacy</h2>
+
+    <p>The two terms get used interchangeably and they should not be. AI literacy is conceptual. It is understanding what a model is, what training data does, why a model trained mostly on one population underperforms on another, what a false positive costs versus a false negative. Literacy is the vocabulary. It is necessary and it is teachable in a lecture hall.</p>
+
+    <p>Fluency is the applied layer on top. It is literacy plus reps. You can be highly literate about bias in clinical algorithms and still freeze the first time a model contradicts your own read of a chest film. Literacy tells you the contradiction is possible. Fluency tells you what to do about it on Tuesday at 2pm with six more studies in the queue. Literacy is knowing the words. Fluency is holding the conversation when the patient pushes back.</p>
+
+    <p>This distinction matters for how you spend a training budget. Literacy scales through content. Fluency only scales through practice, and practice is more expensive, which is why most programs quietly stop at literacy and call it done.</p>
+
+    <h2>What fluency looks like at four levels</h2>
+
+    <p>It helps to be concrete about what is actually being learned. Fluency is not a single threshold you cross. It builds in layers, and a clinician can be solid at one level and shaky at the next.</p>
+
+    <ul class="levels">
+      <li>
+        <span class="lab"><span>01</span> &nbsp;Awareness</span>
+        <p>You know the tool exists, what it claims to do, and where it sits in your workflow. This is where most rollouts leave people.</p>
+      </li>
+      <li>
+        <span class="lab"><span>02</span> &nbsp;Operation</span>
+        <p>You can use the tool correctly, read its output, and act on the straightforward cases. Necessary, but it is also the level where overtrust creeps in.</p>
+      </li>
+      <li>
+        <span class="lab"><span>03</span> &nbsp;Judgment</span>
+        <p>You know the tool's failure modes from experience. You recognize the patient types where it underperforms, and you override it deliberately rather than by reflex. This is the level that protects patients.</p>
+      </li>
+      <li>
+        <span class="lab"><span>04</span> &nbsp;Governance</span>
+        <p>You can question the tool at the system level: who validated it, on which population, when it was last checked for drift, and who is accountable when it fails. This is fluency for the people who buy and oversee the tools, not just use them.</p>
+      </li>
+    </ul>
+
+    <p>The dangerous level is 02. A clinician who can operate a tool but has not yet developed judgment about its failure modes is more likely to defer to a confident-looking output than someone who never had the tool at all. Automation bias is well documented, and a smooth interface makes it worse. Operation without judgment is not fluency. It is exposure.</p>
+
+    <p>These levels describe how deep one person's fluency runs. A second cut is by role, because a bedside nurse, an AI translator, a developer, and a health system executive each need fluency in a different direction. The HelloAI program maps that out across its <a href="https://helloaiprofessional.com/context-preview">Consumer, Translator, Developer, and Executive tiers</a>. The habits stay the same at every tier. Apply, judge, communicate. The depth is what changes.</p>
+
+    <h2>How clinicians and health systems actually build it</h2>
+
+    <p>Fluency comes from supervised practice on real cases, not from a one-time module. The clinicians I see develop real judgment are the ones who used a tool on hundreds of their own patients, watched where it agreed with them and where it did not, and got to discuss the disagreements with peers. That loop is the whole game. It is also why fluency cannot be front-loaded before go-live. Some of it has to be earned after, in the actual workflow.</p>
+
+    <p>For a health system, three things move the needle. First, teach failure modes, not features. Every tool should ship to staff with an honest account of where it breaks and which patients it serves least well. Second, make overrides normal and tracked. A clinician who overrides a model should not feel like they are fighting the system, and the override data is one of the best signals you have about whether the tool and the staff are calibrated. Third, name the owner of the decision. Fluency collapses when nobody is sure whether the model or the human is responsible, so write it down before the tool goes live.</p>
+
+    <p>None of this is exotic. It is the ordinary discipline of introducing a powerful instrument into clinical work, the same care you would take with a new contrast agent or a new device. AI has been treated as a software install when it should be treated as a clinical change.</p>
+
+    <p>The reason fluency is worth the cost is simple. Accuracy of the model is not what determines whether a patient is helped. The decision around the model is. A fluent clinician with a mediocre tool will outperform an overtrusting one with a state-of-the-art tool, every time. That is the case for building fluency, and it is why I keep arguing that the hard part of healthcare AI was never the algorithm.</p>
+
+    <div class="endcard">
+      <h2>Keep reading</h2>
+      <p>I write a daily research summary and a monthly newsletter on healthcare AI for the people who have to make it work. <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7016868239498444800">Subscribe to the newsletter</a>, or see <a href="/">what else I'm working on</a>.</p>
+    </div>
+  </article>
+</main>
+<footer class="site">
+    <div class="row">
+      <div class="foot-main"><p class="foot-cta"><a href="/#speaking">Book Jan</a> or write to <a href="mailto:team@janbeger.ai">team@janbeger.ai</a></p><p class="foot-meta">&copy; <span class="yr" id="yr">2026</span> Jan Beger &nbsp;&middot;&nbsp; Updated November 2026 &nbsp;&middot;&nbsp; <a href="/faq.html">FAQ</a> &nbsp;&middot;&nbsp; <a href="/press.html">Press</a> &nbsp;&middot;&nbsp; <a href="/impressum/">Impressum</a> &nbsp;&middot;&nbsp; <a href="/datenschutz/">Datenschutz</a> &nbsp;&middot;&nbsp; <a href="/ki-keynote-speaker-gesundheitswesen/" hreflang="de" lang="de">Deutsch</a></p></div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/janbeger" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="https://janbeger.substack.com/" target="_blank" rel="noopener" aria-label="Substack"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+        <a href="https://bsky.app/profile/janbeger.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.581-7.386 2.005-2.83 7.078 5.013 5.59 6.87-1.197 7.823-4.643.953 3.446 2.05 10.061 7.733 4.643 4.267-4.073.792-5.497-3.119-6.078 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.79.624-6.48 0-.688-.139-1.86-.902-2.202-.659-.298-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg></a>
+        <a href="https://www.instagram.com/jan.beger/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+<script src="/assets/subpage.js" defer></script>
+</body>
+</html>

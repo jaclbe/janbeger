@@ -1,0 +1,42 @@
+# Jan Beger
+
+> Jan Beger is Global Head of AI Advocacy at GE HealthCare and Executive Director of HelloAI. He is a healthcare AI keynote speaker who talks to the people who have to make AI work in healthcare (clinicians, radiologists, nurses, and healthcare and health system leaders), not the people who build it. He also speaks at leadership, corporate, and cross-industry events, using healthcare as the hardest test case for trust, accountability, and adoption of AI in any organization. His core argument: the hard part of healthcare AI isn't the algorithm. It's trust, workflow, and adoption.
+
+Key facts:
+- Roles: Global Head of AI Advocacy, GE HealthCare; Executive Director, HelloAI (AI fluency for healthcare professionals, a GE HealthCare initiative).
+- HelloAI has trained more than 10,000 healthcare professionals from over 100 countries since 2018 (helloaiprofessional.com).
+- More than 20 years in healthcare informatics, medical imaging IT, and AI. Based in Germany. Speaks English and German.
+- Summarizes one healthcare AI research paper a day on LinkedIn for more than 92,000 followers; sends the ten papers that mattered each month to more than 45,000 subscribers of the LinkedIn newsletter "Interesting Reads".
+- Writes "Second Opinion" on Substack for health system leaders.
+- Founder of Edison Accelerator, a collaboration platform connecting providers, startups, and industry leaders to accelerate AI adoption in healthcare.
+- Founder of GR4AI (Get Ready for AI), a non-profit book project that helps children aged seven to twelve understand artificial intelligence.
+- TEDx talk (TEDxNewRiver, 2026): "When AI Does the Work, Humans Can Care".
+- Formats: keynote, panel, workshop, fireside chat, podcast, interview. In person and online.
+- Booking and contact: team@janbeger.ai or the inquiry form at https://janbeger.ai/#speaking
+
+## Speaking
+
+- [Healthcare AI keynote speaker](https://janbeger.ai/healthcare-ai-keynote-speaker/): topics, recent stages, formats, and how to book
+- [AI in radiology speaker](https://janbeger.ai/ai-in-radiology-speaker/): talks for radiologists, radiographers, and imaging leaders
+- [KI Keynote Speaker für das Gesundheitswesen](https://janbeger.ai/ki-keynote-speaker-gesundheitswesen/): German speaker page
+- [Tour dates](https://janbeger.ai/#events): upcoming and past events (the homepage is the single source of truth for dates)
+
+## Writing and projects
+
+- [What is AI fluency in healthcare?](https://janbeger.ai/ai-fluency-in-healthcare/): definition and how clinicians and health systems build it
+- [2035: The Job Description of a Diagnostic Radiologist](https://janbeger.ai/radiologist-2035/): three versions of the role and a short quiz
+- [Rethinking trust in the age of medical AI](https://www.sciencedirect.com/science/article/pii/S3050577125000362): European Journal of Radiology Artificial Intelligence, 2025
+- [Three Futures for the Diagnostic Radiologist](https://www.sciencedirect.com/science/article/pii/S3050577126000496): European Journal of Radiology Artificial Intelligence, 2026
+- [Second Opinion on Substack](https://janbeger.substack.com)
+
+## Press
+
+- [Press kit](https://janbeger.ai/press.html): approved bio, headshots, and essentials
+- [Bio (PDF)](https://janbeger.ai/press/2026_Jan_Beger_Bio.pdf)
+- [FAQ](https://janbeger.ai/faq.html)
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/janbeger)
+- [Bluesky](https://bsky.app/profile/janbeger.bsky.social)
+- [Instagram](https://www.instagram.com/jan.beger/)
