@@ -1484,6 +1484,15 @@
     #events .event-card .event-date--span .ev-ph-day{ display: block; font-size: 21px; font-weight: 600; letter-spacing: -.01em; color: #f5f3ef; white-space: nowrap; }
     #events .event-card.past .event-date--span .ev-ph-month, #events .event-card.past .event-date--span .ev-ph-day{ color: inherit; }
   }
+
+  /* ================= PHONES: SMALLER BOOKING PORTRAIT ON 1x/2x SCREENS (2026-11-20) ================= */
+  /* shown about 300x470 css px on phones: 620 px wide is sharp up to 2x; 3x screens keep the 695 px original */
+  @media (max-width: 900px){
+    .speaking::before{
+      background-image: radial-gradient(ellipse 60% 45% at 50% 62%, rgba(244,241,234,0.06), rgba(244,241,234,0) 70%), -webkit-image-set(url("assets/portrait-cutout-620.webp") 1x, url("assets/portrait-cutout-620.webp") 2x, url("assets/portrait-cutout.webp") 3x);
+      background-image: radial-gradient(ellipse 60% 45% at 50% 62%, rgba(244,241,234,0.06), rgba(244,241,234,0) 70%), image-set(url("assets/portrait-cutout-620.webp") 1x, url("assets/portrait-cutout-620.webp") 2x, url("assets/portrait-cutout.webp") 3x);
+    }
+  }
 </style>
 
 <!-- Privacy-friendly analytics by Plausible -->
