@@ -1453,7 +1453,7 @@
   /* ================= CLEANER TOUR CARDS ON PHONES (2026-11-20) ================= */
   /* phones: date in a narrow left column (month over day), details on the right, both links in one quiet row */
   @media (max-width: 760px){
-    #events .event-card{ display: grid; grid-template-columns: 68px auto 1fr; column-gap: 0; row-gap: 0; align-items: start; padding: 22px 0; }
+    #events .event-card{ display: grid; grid-template-columns: 72px auto 1fr; column-gap: 0; row-gap: 0; align-items: start; padding: 22px 0; }
     #events .event-card .event-date{ grid-column: 1; grid-row: 1 / span 3; display: flex; flex-direction: column; gap: 2px; padding-top: 3px; font-size: 22px; line-height: 1.05; }
     #events .event-card .event-month{ font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #c4b5fd; }
     #events .event-card .event-day{ font-size: 21px; font-weight: 600; letter-spacing: -.01em; color: #f5f3ef; white-space: nowrap; }
@@ -1467,10 +1467,22 @@
     #events .event-card .event-cta{ min-height: 44px; padding: 0; border: 0; border-radius: 0; font-size: 14px; font-weight: 700; color: #f5f3ef; text-decoration: underline; text-decoration-color: rgba(244,241,234,.35); text-underline-offset: 4px; }
     #events .event-card .event-cta:hover, #events .event-card .event-cta:focus-visible{ color: #ddd6fe; text-decoration-color: currentColor; }
     #events .event-card .event-pending{ min-height: 44px; display: inline-flex; align-items: center; margin: 0; padding: 0; font-size: 14px; }
+    #events .event-card[hidden]{ display: none; }
   }
   @media (max-width: 374px){
-    #events .event-card{ grid-template-columns: 60px auto 1fr; }
+    #events .event-card{ grid-template-columns: 70px auto 1fr; }
+    #events .event-card .event-day, #events .event-card .event-date--span .ev-ph-day{ font-size: 19px; }
     #events .event-card .event-meet{ margin-right: 16px; }
+  }
+
+  /* ================= PHONES: EVENTS SPANNING TWO MONTHS (2026-11-20) ================= */
+  /* .event-date--span: desktop and scripts keep the one-line date; phones show month over day like the other cards */
+  .ev-ph-month, .ev-ph-day{ display: none; }
+  @media (max-width: 760px){
+    #events .event-card .event-date--span .event-month{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    #events .event-card .event-date--span .ev-ph-month{ display: block; white-space: nowrap; font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: #c4b5fd; }
+    #events .event-card .event-date--span .ev-ph-day{ display: block; font-size: 21px; font-weight: 600; letter-spacing: -.01em; color: #f5f3ef; white-space: nowrap; }
+    #events .event-card.past .event-date--span .ev-ph-month, #events .event-card.past .event-date--span .ev-ph-day{ color: inherit; }
   }
 </style>
 
@@ -1655,8 +1667,9 @@
       </li>
 
       <li class="event-card" data-event-start="2026-11-29" data-event-end="2026-12-03" data-attending>
-        <div class="event-date">
+        <div class="event-date event-date--span">
           <span class="event-month">Nov&nbsp;29&thinsp;&ndash;&thinsp;Dec&nbsp;3</span>
+          <span class="ev-ph-month" aria-hidden="true">Nov&ndash;Dec</span><span class="ev-ph-day" aria-hidden="true">29&ndash;3</span>
         </div>
         <div class="event-info">
           <p class="event-name">RSNA 2026</p>
