@@ -1440,6 +1440,30 @@
     #events.tm-follow .tm-active-city{ font-size: 18px; font-weight: 700; color: #f5f3ef; }
   }
   .tour-map .tm-flab{ display: none; }
+  /* ================= TOUR DATES: MAP FOLLOWS THE LIST ON PHONES AND TABLETS (2026-11-22) ================= */
+  /* <1100px: the map sticks under the menu bar as a wide strip, zooms to each leg and lights up the stop you are reading */
+  @media (max-width: 1099px){
+    #events.tm-follow-m .tour-map{ position: sticky; top: var(--tm-top, 76px); z-index: 4; margin: 32px 0 24px; padding: 8px 0 10px; background: var(--charcoal); box-shadow: 0 calc(-1 * var(--tm-top, 76px)) 0 0 var(--charcoal); }
+    #events.tm-follow-m .tour-map::before{ left: 0; right: 0; top: 0; bottom: 0; }
+    #events.tm-follow-m .tour-map::after{ content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 26px; background: linear-gradient(var(--charcoal), rgba(20,21,24,0)); pointer-events: none; }
+    #events.tm-follow-m .tour-map figcaption{ display: none; }
+    #events.tm-follow-m .tour-map-svg{ overflow: hidden; }
+    #events.tm-follow-m .event-card:not(.past){ opacity: .5; transition: opacity .35s ease; }
+    #events.tm-follow-m .event-card.is-active{ opacity: 1; }
+    #events.tm-follow-m .tour-map .city text:not(.tm-flab), #events.tm-follow-m .tour-map .city.is-next .tm-code{ display: none !important; }
+    #events.tm-follow-m .tour-map .city.is-next text.tm-flab{ display: block !important; font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .03em; fill: rgba(245,243,239,.5); transition: fill .35s ease; }
+    #events.tm-follow-m .tour-map .city.is-visited text.tm-flab{ fill: #b6b3ad; }
+    #events.tm-follow-m .tour-map .city.is-active text.tm-flab{ fill: #ffffff; }
+    #events.tm-follow-m .tour-map .city.tm-cut text.tm-flab{ display: none !important; }
+    #events.tm-follow-m .tour-map .city .pin{ r: 4.5px; }
+    #events.tm-follow-m .tour-map .city.is-next .pin{ fill: rgba(167,139,250,.45); transition: fill .35s ease; }
+    #events.tm-follow-m .tour-map .city.is-visited .pin, #events.tm-follow-m .tour-map .city.is-active .pin{ fill: #a78bfa; }
+    #events.tm-follow-m .tour-map .city.is-next .halo{ animation: none; opacity: 0; transform-box: fill-box; transform-origin: center; transition: opacity .35s ease, transform .35s ease; }
+    #events.tm-follow-m .tour-map .city.is-active .halo{ opacity: .3; transform: scale(1.5); }
+    #events.tm-follow-m .tour-map .tour-route .route-seg{ stroke-dashoffset: 1; transition: stroke-dashoffset .7s cubic-bezier(.4,0,.2,1); transition-delay: 0s !important; }
+    #events.tm-follow-m .tour-map .tour-route .route-seg.on{ stroke-dashoffset: 0; }
+  }
+  @media (prefers-reduced-motion: reduce){ #events.tm-follow-m .event-card, #events.tm-follow-m .tour-map .tour-route .route-seg, #events.tm-follow-m .tour-map .tm-flab, #events.tm-follow-m .tour-map .pin{ transition: none !important; } }
   @media (prefers-reduced-motion: reduce){ #events.tm-follow .event-card, #events.tm-follow .tour-map .tour-route .route-seg, #events.tm-follow .tour-map .tm-flab, #events.tm-follow .tour-map .pin{ transition: none !important; } }
 
   /* ================= NO DOUBLE LINES IN TOUR DATES (2026-11-19) ================= */
@@ -2519,7 +2543,9 @@
     io.observe(fig);
   })();
 
-  /* Tour dates, desktop: the map follows the event you are reading (2026-11-19); zooms to each leg (2026-11-20) */
+  /* Tour dates: the map follows the event you are reading and zooms to each leg of the route.
+     Desktop >=1100px (2026-11-19/20): list left, sticky map right.
+     Phones and tablets <1100px (2026-11-22): the map sticks under the menu bar as a wide strip. */
   (function(){
     var sec = document.getElementById('events'); var fig = sec && sec.querySelector('.tour-map'); if (!fig) return;
     var svg = fig.querySelector('svg'); if (!svg || !window.matchMedia) return;
@@ -2528,55 +2554,14 @@
     var cities = [].slice.call(svg.querySelectorAll('.city.is-next')).sort(function(a, b){ return a.getAttribute('data-end') < b.getAttribute('data-end') ? -1 : 1; });
     if (cities.length < 2) return;
     var segs = [].slice.call(svg.querySelectorAll('.tour-route .route-seg'));
+    var trails = [].slice.call(svg.querySelectorAll('.tour-route .route-trail'));
+    var land = svg.querySelector('.land'), nav = document.querySelector('nav.top');
     var origVB = svg.getAttribute('viewBox');
-    /* camera: zooms to each leg of the route as you scroll (2026-11-20) */
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var BASE = [420, 10, 420, 300], AR = 420 / 300, MINW = 190, MAPW = 1000, MAPH = 364;
+    var MAPW = 1000, MAPH = 364;
     var xy = function(c){ var m = /translate\(([-\d.]+)[ ,]+([-\d.]+)\)/.exec(c.getAttribute('transform') || ''); return m ? [+m[1], +m[2]] : [0, 0]; };
     var allCities = [].slice.call(svg.querySelectorAll('.city')).map(function(c){ var p = xy(c); return { el: c, x: p[0], y: p[1], t: c.getAttribute('transform') }; });
-    var land = svg.querySelector('.land'), trails = [].slice.call(svg.querySelectorAll('.tour-route .route-trail'));
-    var cams = cities.map(function(c, i){
-      var b = xy(c), xs = [b[0]], ys = [b[1]];
-      if (i > 0){
-        var a = xy(cities[i - 1]), dx = b[0] - a[0], dy = b[1] - a[1], len = Math.sqrt(dx * dx + dy * dy) || 1, off = Math.max(10, len * 0.3);
-        var qx = (a[0] + b[0]) / 2 + dy / len * off, qy = (a[1] + b[1]) / 2 - dx / len * off;
-        xs.push(a[0], (a[0] + 2 * qx + b[0]) / 4); ys.push(a[1], (a[1] + 2 * qy + b[1]) / 4);
-      }
-      var x0 = Math.min.apply(0, xs), x1 = Math.max.apply(0, xs), y0 = Math.min.apply(0, ys), y1 = Math.max.apply(0, ys);
-      var w = Math.min(MAPW, Math.max(MINW, (x1 - x0) * 1.45 + 190, ((y1 - y0) * 1.45 + 70) * AR)), h = w / AR;
-      var cx = (x0 + x1) / 2, cy = (y0 + y1) / 2 + h * 0.04;
-      var x = w >= MAPW ? 0 : Math.min(Math.max(cx - w / 2, 0), MAPW - w);
-      var y = h >= MAPH ? (MAPH - h) / 2 : Math.min(Math.max(cy - h / 2, 0), MAPH - h);
-      return [x, y, w, h];
-    });
-    var vb = BASE.slice(), anim = null, firstFly = true;
-    function setVB(v){
-      vb = v; svg.setAttribute('viewBox', v.map(function(n){ return n.toFixed(2); }).join(' '));
-      var s = v[2] / BASE[2], sc = s.toFixed(4);
-      allCities.forEach(function(c){ c.el.setAttribute('transform', 'translate(' + c.x + ' ' + c.y + ') scale(' + sc + ')'); });
-      if (land) land.style.strokeWidth = (3.6 * Math.pow(s, 0.6)).toFixed(3);
-      segs.forEach(function(sg){ sg.style.strokeWidth = (1.8 * s).toFixed(3); });
-      trails.forEach(function(t){ t.style.strokeWidth = (1.2 * s).toFixed(3); t.style.strokeDasharray = (2 * s).toFixed(2) + ' ' + (4 * s).toFixed(2); });
-    }
-    function flyTo(t, instant){
-      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
-      if (instant || reduce){ setVB(t.slice()); return; }
-      var f = vb.slice(), t0 = performance.now(), D = 1100;
-      var fx = f[0] + f[2] / 2, fy = f[1] + f[3] / 2, tx = t[0] + t[2] / 2, ty = t[1] + t[3] / 2, l0 = Math.log(f[2]), l1 = Math.log(t[2]);
-      function step(now){
-        var k = Math.min(1, (now - t0) / D), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-        var w = Math.exp(l0 + (l1 - l0) * e), h = w / AR, cx = fx + (tx - fx) * e, cy = fy + (ty - fy) * e;
-        setVB([cx - w / 2, cy - h / 2, w, h]); anim = k < 1 ? window.requestAnimationFrame(step) : null;
-      }
-      anim = window.requestAnimationFrame(step);
-    }
-    function resetCam(){
-      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
-      allCities.forEach(function(c){ c.el.setAttribute('transform', c.t); });
-      if (land) land.style.strokeWidth = '';
-      segs.concat(trails).forEach(function(n){ n.style.strokeWidth = ''; n.style.strokeDasharray = ''; });
-      vb = BASE.slice(); firstFly = true;
-    }
+    /* labels with the full city name, shown in follow mode */
     var POS = { l: [-8, 3.5, 'end'], r: [8, 3.5, 'start'], b: [0, 19, 'middle'], bl: [-4, 19, 'end'], br: [4, 19, 'start'] };
     var byEnd = {};
     cities.forEach(function(c, i){
@@ -2589,8 +2574,103 @@
     var capNum = document.createElement('span'); capNum.className = 'tm-active-num';
     var capCity = document.createElement('span'); capCity.className = 'tm-active-city';
     cap.appendChild(capNum); cap.appendChild(capCity); fig.insertBefore(cap, fig.querySelector('figcaption'));
+
+    /* camera. Per mode: AR = frame aspect (kept fixed so the map's height never jumps), REF = frame width at which
+       pins and labels have their designed size, MINW = closest zoom, PAD = room for labels, BASE = frame with no stop active */
+    var cfg = null, cams = [];
+    function frame(pts, c){
+      var xs = pts.map(function(p){ return p[0]; }), ys = pts.map(function(p){ return p[1]; });
+      var x0 = Math.min.apply(0, xs), x1 = Math.max.apply(0, xs), y0 = Math.min.apply(0, ys), y1 = Math.max.apply(0, ys);
+      var w = Math.min(MAPW, Math.max(c.MINW, (x1 - x0) * 1.45 + c.PAD, ((y1 - y0) * 1.45 + 70) * c.AR)), h = w / c.AR;
+      var cx = (x0 + x1) / 2, cy = (y0 + y1) / 2 + h * 0.04;
+      var x = w >= MAPW ? 0 : Math.min(Math.max(cx - w / 2, 0), MAPW - w);
+      var y = h >= MAPH ? (MAPH - h) / 2 : Math.min(Math.max(cy - h / 2, 0), MAPH - h);
+      return [x, y, w, h];
+    }
+    function legPts(i){
+      var b = xy(cities[i]), pts = [b];
+      if (i > 0){
+        var a = xy(cities[i - 1]), dx = b[0] - a[0], dy = b[1] - a[1], len = Math.sqrt(dx * dx + dy * dy) || 1, off = Math.max(10, len * 0.3);
+        var qx = (a[0] + b[0]) / 2 + dy / len * off, qy = (a[1] + b[1]) / 2 - dx / len * off;
+        pts.push(a, [(a[0] + 2 * qx + b[0]) / 4, (a[1] + 2 * qy + b[1]) / 4]);
+      }
+      return pts;
+    }
+    /* phones: make room for the leg's city names (label size depends on the zoom, so frame twice) */
+    function labelPts(i, s){
+      var out = [];
+      [i - 1, i].forEach(function(j){
+        if (j < 0) return;
+        var c = cities[j], p = xy(c), P = POS[c.getAttribute('data-label-pos') || c.getAttribute('data-code-pos') || 'r'] || POS.r;
+        var t = (c.querySelector('title') || {}).textContent || '', lw = t.length * 7.4 * s, gx = P[0] * s, gy = P[1] * s;
+        if (P[2] === 'end') out.push([p[0] + gx - lw - 6 * s, p[1] + gy]);
+        else if (P[2] === 'start') out.push([p[0] + gx + lw + 6 * s, p[1] + gy]);
+        else out.push([p[0] - lw / 2 - 6 * s, p[1] + gy + 4 * s], [p[0] + lw / 2 + 6 * s, p[1] + gy + 4 * s]);
+      });
+      return out;
+    }
+    function legFrame(i, c){
+      if (!c.LBL) return frame(legPts(i), c);
+      var f = frame(legPts(i), c);
+      for (var k = 0; k < 2; k++) f = frame(legPts(i).concat(labelPts(i, f[2] / c.REF)), c);
+      return f;
+    }
+    function config(mode){
+      if (mode === 'd') return { AR: 1.4, REF: 420, MINW: 190, PAD: 190, BASE: [420, 10, 420, 300] };
+      var w = svg.getBoundingClientRect().width || 360;
+      var c = { AR: Math.max(2.1, w / 220), REF: w * 0.85, MINW: 150, PAD: 40, LBL: true };
+      c.BASE = frame(cities.map(xy), { AR: c.AR, MINW: c.MINW, PAD: 170 });
+      return c;
+    }
+    var vb = null, anim = null, firstFly = true;
+    function setVB(v){
+      vb = v; svg.setAttribute('viewBox', v.map(function(n){ return n.toFixed(2); }).join(' '));
+      var s = v[2] / cfg.REF, sc = s.toFixed(4);
+      allCities.forEach(function(c){ c.el.setAttribute('transform', 'translate(' + c.x + ' ' + c.y + ') scale(' + sc + ')'); });
+      if (land) land.style.strokeWidth = (3.6 * Math.pow(s, 0.6)).toFixed(3);
+      segs.forEach(function(sg){ sg.style.strokeWidth = (1.8 * s).toFixed(3); });
+      trails.forEach(function(t){ t.style.strokeWidth = (1.2 * s).toFixed(3); t.style.strokeDasharray = (2 * s).toFixed(2) + ' ' + (4 * s).toFixed(2); });
+    }
+    function flyTo(t, instant){
+      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
+      if (instant || reduce || !vb){ setVB(t.slice()); fitLabels(); return; }
+      var f = vb.slice(), t0 = performance.now(), D = 1100;
+      var fx = f[0] + f[2] / 2, fy = f[1] + f[3] / 2, tx = t[0] + t[2] / 2, ty = t[1] + t[3] / 2, l0 = Math.log(f[2]), l1 = Math.log(t[2]);
+      function step(now){
+        var k = Math.min(1, (now - t0) / D), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        var w = Math.exp(l0 + (l1 - l0) * e), h = w / cfg.AR, cx = fx + (tx - fx) * e, cy = fy + (ty - fy) * e;
+        setVB([cx - w / 2, cy - h / 2, w, h]); anim = k < 1 ? window.requestAnimationFrame(step) : (fitLabels(), null);
+      }
+      if (cfg.LBL) cities.forEach(function(c){ c.classList.remove('tm-cut'); });
+      anim = window.requestAnimationFrame(step);
+    }
+    /* phones: hide a city name that does not fit the frame instead of showing it cut off */
+    function fitLabels(){
+      if (!cfg || !cfg.LBL || !vb) return;
+      var s = vb[2] / cfg.REF, shown = [];
+      /* the leg you are reading gets its names first; any other name that would overlap one already shown is hidden */
+      var order = cities.map(function(c, i){ return i; }).sort(function(a, b){
+        var pa = a === current ? 0 : a === current - 1 ? 1 : 2, pb = b === current ? 0 : b === current - 1 ? 1 : 2; return pa - pb || a - b; });
+      order.forEach(function(i){
+        var c = cities[i], l = c.querySelector('.tm-flab'), p = xy(c); if (!l) return;
+        var b; try { b = l.getBBox(); } catch (e){ return; }
+        var x0 = p[0] + b.x * s, x1 = p[0] + (b.x + b.width) * s, y0 = p[1] + b.y * s, y1 = p[1] + (b.y + b.height) * s;
+        var cut = x0 < vb[0] || x1 > vb[0] + vb[2] || y0 < vb[1] || y1 > vb[1] + vb[3];
+        if (!cut) cut = shown.some(function(o){ return x0 < o[2] && x1 > o[0] && y0 < o[3] && y1 > o[1]; });
+        if (!cut) shown.push([x0 - 2 * s, y0, x1 + 2 * s, y1]);
+        c.classList.toggle('tm-cut', cut);
+      });
+    }
+    function resetCam(){
+      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
+      allCities.forEach(function(c){ c.el.setAttribute('transform', c.t); c.el.classList.remove('tm-cut'); });
+      if (land) land.style.strokeWidth = '';
+      segs.concat(trails).forEach(function(n){ n.style.strokeWidth = ''; n.style.strokeDasharray = ''; });
+      vb = null; svg.setAttribute('viewBox', origVB);
+    }
+
     var cards = function(){ return [].slice.call(sec.querySelectorAll('.event-card:not(.past):not([hidden])')); };
-    var on = false, current = null, currentCard = null, ticking = false;
+    var mode = null, current = null, currentCard = null, ticking = false;
     function setActive(card){
       cards().forEach(function(k){ k.classList.toggle('is-active', k === card); });
       var idx = card && byEnd.hasOwnProperty(card.getAttribute('data-event-end')) ? byEnd[card.getAttribute('data-event-end')] : -1;
@@ -2601,28 +2681,47 @@
         capCity.textContent = idx >= 0 ? (((cities[idx].querySelector('title') || {}).textContent || '') + (cities[idx].getAttribute('data-country') ? ', ' + cities[idx].getAttribute('data-country') : '')) : tx('.event-name');
       }
       if (idx === current) return; current = idx;
-      flyTo(idx >= 0 ? cams[idx] : BASE, firstFly); firstFly = false;
+      flyTo(idx >= 0 ? cams[idx] : cfg.BASE, firstFly); firstFly = false;
       cities.forEach(function(c, i){ c.classList.toggle('is-active', i === idx); c.classList.toggle('is-visited', idx >= 0 && i < idx); });
       segs.forEach(function(sg, i){ sg.classList.toggle('on', i < idx); });
     }
     function update(){
-      ticking = false; if (!on) return;
-      var mid = window.innerHeight * 0.45, best = null, bd = 1e9;
+      ticking = false; if (!mode) return;
+      var mid = window.innerHeight * 0.45;
+      if (mode === 'm'){
+        /* the strip lets go when the last upcoming event scrolls past it, so past appearances read without it */
+        var list = cards(), last = list[list.length - 1], top = parseFloat(sec.style.getPropertyValue('--tm-top')) || 76;
+        var lift = last ? Math.min(0, last.getBoundingClientRect().bottom - (top + fig.offsetHeight)) : 0;
+        fig.style.transform = lift < 0 ? 'translateY(' + lift.toFixed(1) + 'px)' : '';
+        var fb = fig.getBoundingClientRect().bottom; mid = Math.max(fb, 0) + (window.innerHeight - Math.max(fb, 0)) * 0.35;
+      }
+      var best = null, bd = 1e9;
       cards().forEach(function(k){ var r = k.getBoundingClientRect(); var d = Math.abs(r.top + r.height / 2 - mid); if (d < bd){ bd = d; best = k; } });
       setActive(best);
     }
     function onScroll(){ if (!ticking){ ticking = true; window.requestAnimationFrame(update); } }
-    function apply(){
-      var want = mq.matches; if (want === on) return; on = want;
-      sec.classList.toggle('tm-follow', on);
-      if (on){ setVB(BASE.slice()); firstFly = true; current = null; currentCard = null; update(); window.addEventListener('scroll', onScroll, { passive: true }); }
-      else {
-        resetCam(); svg.setAttribute('viewBox', origVB); window.removeEventListener('scroll', onScroll); current = null;
-        cards().forEach(function(k){ k.classList.remove('is-active'); });
-        cities.forEach(function(c){ c.classList.remove('is-active', 'is-visited'); });
-        segs.forEach(function(sg){ sg.classList.remove('on'); });
-      }
+    function setup(){
+      if (mode === 'm' && nav){ var nb = nav.getBoundingClientRect(); sec.style.setProperty('--tm-top', Math.round(Math.max(0, nb.bottom) + 8) + 'px'); }
+      cfg = config(mode); cams = cities.map(function(c, i){ return legFrame(i, cfg); });
+      firstFly = true; current = null; currentCard = null;
+      setVB(cfg.BASE); update();
     }
+    function apply(){
+      var want = mq.matches ? 'd' : 'm'; if (want === mode) return;
+      if (mode){ sec.classList.remove('tm-follow', 'tm-follow-m'); fig.style.transform = ''; }
+      mode = want;
+      sec.classList.add(mode === 'd' ? 'tm-follow' : 'tm-follow-m');
+      cards().forEach(function(k){ k.classList.remove('is-active'); });
+      cities.forEach(function(c){ c.classList.remove('is-active', 'is-visited'); });
+      segs.forEach(function(sg){ sg.classList.remove('on'); });
+      resetCam(); setup();
+    }
+    var rz = null, lastW = window.innerWidth;
+    window.addEventListener('resize', function(){
+      if (window.innerWidth === lastW) return; lastW = window.innerWidth; /* phones fire resize when the address bar hides */
+      clearTimeout(rz); rz = setTimeout(function(){ if (mode === 'm' && !mq.matches){ setup(); } }, 150);
+    }, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
     apply();
     if (mq.addEventListener) mq.addEventListener('change', apply); else if (mq.addListener) mq.addListener(apply);
   })();
