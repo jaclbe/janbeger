@@ -2519,7 +2519,7 @@
     io.observe(fig);
   })();
 
-  /* Tour dates, desktop: the map follows the event you are reading (2026-11-19) */
+  /* Tour dates, desktop: the map follows the event you are reading (2026-11-19); zooms to each leg (2026-11-20) */
   (function(){
     var sec = document.getElementById('events'); var fig = sec && sec.querySelector('.tour-map'); if (!fig) return;
     var svg = fig.querySelector('svg'); if (!svg || !window.matchMedia) return;
@@ -2529,6 +2529,54 @@
     if (cities.length < 2) return;
     var segs = [].slice.call(svg.querySelectorAll('.tour-route .route-seg'));
     var origVB = svg.getAttribute('viewBox');
+    /* camera: zooms to each leg of the route as you scroll (2026-11-20) */
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var BASE = [420, 10, 420, 300], AR = 420 / 300, MINW = 190, MAPW = 1000, MAPH = 364;
+    var xy = function(c){ var m = /translate\(([-\d.]+)[ ,]+([-\d.]+)\)/.exec(c.getAttribute('transform') || ''); return m ? [+m[1], +m[2]] : [0, 0]; };
+    var allCities = [].slice.call(svg.querySelectorAll('.city')).map(function(c){ var p = xy(c); return { el: c, x: p[0], y: p[1], t: c.getAttribute('transform') }; });
+    var land = svg.querySelector('.land'), trails = [].slice.call(svg.querySelectorAll('.tour-route .route-trail'));
+    var cams = cities.map(function(c, i){
+      var b = xy(c), xs = [b[0]], ys = [b[1]];
+      if (i > 0){
+        var a = xy(cities[i - 1]), dx = b[0] - a[0], dy = b[1] - a[1], len = Math.sqrt(dx * dx + dy * dy) || 1, off = Math.max(10, len * 0.3);
+        var qx = (a[0] + b[0]) / 2 + dy / len * off, qy = (a[1] + b[1]) / 2 - dx / len * off;
+        xs.push(a[0], (a[0] + 2 * qx + b[0]) / 4); ys.push(a[1], (a[1] + 2 * qy + b[1]) / 4);
+      }
+      var x0 = Math.min.apply(0, xs), x1 = Math.max.apply(0, xs), y0 = Math.min.apply(0, ys), y1 = Math.max.apply(0, ys);
+      var w = Math.min(MAPW, Math.max(MINW, (x1 - x0) * 1.45 + 190, ((y1 - y0) * 1.45 + 70) * AR)), h = w / AR;
+      var cx = (x0 + x1) / 2, cy = (y0 + y1) / 2 + h * 0.04;
+      var x = w >= MAPW ? 0 : Math.min(Math.max(cx - w / 2, 0), MAPW - w);
+      var y = h >= MAPH ? (MAPH - h) / 2 : Math.min(Math.max(cy - h / 2, 0), MAPH - h);
+      return [x, y, w, h];
+    });
+    var vb = BASE.slice(), anim = null, firstFly = true;
+    function setVB(v){
+      vb = v; svg.setAttribute('viewBox', v.map(function(n){ return n.toFixed(2); }).join(' '));
+      var s = v[2] / BASE[2], sc = s.toFixed(4);
+      allCities.forEach(function(c){ c.el.setAttribute('transform', 'translate(' + c.x + ' ' + c.y + ') scale(' + sc + ')'); });
+      if (land) land.style.strokeWidth = (3.6 * Math.pow(s, 0.6)).toFixed(3);
+      segs.forEach(function(sg){ sg.style.strokeWidth = (1.8 * s).toFixed(3); });
+      trails.forEach(function(t){ t.style.strokeWidth = (1.2 * s).toFixed(3); t.style.strokeDasharray = (2 * s).toFixed(2) + ' ' + (4 * s).toFixed(2); });
+    }
+    function flyTo(t, instant){
+      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
+      if (instant || reduce){ setVB(t.slice()); return; }
+      var f = vb.slice(), t0 = performance.now(), D = 1100;
+      var fx = f[0] + f[2] / 2, fy = f[1] + f[3] / 2, tx = t[0] + t[2] / 2, ty = t[1] + t[3] / 2, l0 = Math.log(f[2]), l1 = Math.log(t[2]);
+      function step(now){
+        var k = Math.min(1, (now - t0) / D), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        var w = Math.exp(l0 + (l1 - l0) * e), h = w / AR, cx = fx + (tx - fx) * e, cy = fy + (ty - fy) * e;
+        setVB([cx - w / 2, cy - h / 2, w, h]); anim = k < 1 ? window.requestAnimationFrame(step) : null;
+      }
+      anim = window.requestAnimationFrame(step);
+    }
+    function resetCam(){
+      if (anim){ window.cancelAnimationFrame(anim); anim = null; }
+      allCities.forEach(function(c){ c.el.setAttribute('transform', c.t); });
+      if (land) land.style.strokeWidth = '';
+      segs.concat(trails).forEach(function(n){ n.style.strokeWidth = ''; n.style.strokeDasharray = ''; });
+      vb = BASE.slice(); firstFly = true;
+    }
     var POS = { l: [-8, 3.5, 'end'], r: [8, 3.5, 'start'], b: [0, 19, 'middle'], bl: [-4, 19, 'end'], br: [4, 19, 'start'] };
     var byEnd = {};
     cities.forEach(function(c, i){
@@ -2553,6 +2601,7 @@
         capCity.textContent = idx >= 0 ? (((cities[idx].querySelector('title') || {}).textContent || '') + (cities[idx].getAttribute('data-country') ? ', ' + cities[idx].getAttribute('data-country') : '')) : tx('.event-name');
       }
       if (idx === current) return; current = idx;
+      flyTo(idx >= 0 ? cams[idx] : BASE, firstFly); firstFly = false;
       cities.forEach(function(c, i){ c.classList.toggle('is-active', i === idx); c.classList.toggle('is-visited', idx >= 0 && i < idx); });
       segs.forEach(function(sg, i){ sg.classList.toggle('on', i < idx); });
     }
@@ -2566,9 +2615,9 @@
     function apply(){
       var want = mq.matches; if (want === on) return; on = want;
       sec.classList.toggle('tm-follow', on);
-      if (on){ svg.setAttribute('viewBox', '420 10 420 300'); current = null; currentCard = null; update(); window.addEventListener('scroll', onScroll, { passive: true }); }
+      if (on){ setVB(BASE.slice()); firstFly = true; current = null; currentCard = null; update(); window.addEventListener('scroll', onScroll, { passive: true }); }
       else {
-        svg.setAttribute('viewBox', origVB); window.removeEventListener('scroll', onScroll); current = null;
+        resetCam(); svg.setAttribute('viewBox', origVB); window.removeEventListener('scroll', onScroll); current = null;
         cards().forEach(function(k){ k.classList.remove('is-active'); });
         cities.forEach(function(c){ c.classList.remove('is-active', 'is-visited'); });
         segs.forEach(function(sg){ sg.classList.remove('on'); });
