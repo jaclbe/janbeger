@@ -148,6 +148,18 @@
     },
     {
       "@type": "Event",
+      "name": "HIMSS27 Global Health Conference & Exhibition",
+      "startDate": "2027-04-05",
+      "endDate": "2027-04-08",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "McCormick Place", "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" } },
+      "organizer": { "@type": "Organization", "name": "HIMSS", "url": "https://www.himss.org/" },
+      "url": "https://www.himssconference.com/",
+      "performer": { "@id": "https://janbeger.ai/#jan" }
+    },
+    {
+      "@type": "Event",
       "name": "AIMed Global Forum 2027: From code to clinic",
       "startDate": "2027-05-06",
       "endDate": "2027-05-08",
@@ -167,6 +179,30 @@
       "location": { "@type": "Place", "name": "Radisson Hotel and Convention Centre, Johannesburg (OR Tambo)", "address": { "@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA" } },
       "organizer": { "@type": "Organization", "name": "Society of Radiographers of South Africa (SORSA)", "url": "https://www.sorsa.org.za/" },
       "url": "https://consultus-sorsa2027.eventsairsite.com/",
+      "performer": { "@id": "https://janbeger.ai/#jan" }
+    },
+    {
+      "@type": "Event",
+      "name": "HLTH USA 2027",
+      "startDate": "2027-10-17",
+      "endDate": "2027-10-20",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "Venetian Expo", "address": { "@type": "PostalAddress", "addressLocality": "Las Vegas", "addressRegion": "NV", "addressCountry": "US" } },
+      "organizer": { "@type": "Organization", "name": "HLTH", "url": "https://hlth.com/" },
+      "url": "https://hlth.com/events/usa/",
+      "performer": { "@id": "https://janbeger.ai/#jan" }
+    },
+    {
+      "@type": "Event",
+      "name": "RSNA 2027",
+      "startDate": "2027-11-14",
+      "endDate": "2027-11-18",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "McCormick Place", "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" } },
+      "organizer": { "@type": "Organization", "name": "Radiological Society of North America (RSNA)", "url": "https://www.rsna.org/" },
+      "url": "https://www.rsna.org/annual-meeting",
       "performer": { "@id": "https://janbeger.ai/#jan" }
     }
   ]
@@ -424,6 +460,10 @@
         <span class="when">Mar 3–7, 2027</span>
         <span class="what"><span class="name">ECR 2027</span><br><span class="where">European Congress of Radiology, Vienna, Austria &middot; Talk details to follow</span></span>
       </li>
+      <li data-event-end="2027-04-08">
+        <span class="when">Apr 5–8, 2027</span>
+        <span class="what"><span class="name">HIMSS27</span><br><span class="where">HIMSS Global Health Conference &amp; Exhibition, McCormick Place, Chicago &middot; Talk details to follow</span></span>
+      </li>
       <li data-event-end="2027-05-08">
         <span class="when">May 6–8, 2027</span>
         <span class="what"><span class="name">AIMed Global Forum 2027</span><br><span class="where">ICE Krak&oacute;w Congress Centre, Poland + online &middot; From code to clinic</span></span>
@@ -431,6 +471,18 @@
       <li data-event-end="2027-09-19">
         <span class="when">Sep 17–19, 2027</span>
         <span class="what"><span class="name">SORSA 2027 Congress</span><br><span class="where">Radisson Hotel &amp; Convention Centre, Johannesburg, South Africa &middot; Radiography Beyond Borders</span></span>
+      </li>
+      <li data-event-end="2027-10-20">
+        <span class="when">Oct 17–20, 2027</span>
+        <span class="what"><span class="name">HLTH USA 2027</span><br><span class="where">Venetian Expo, Las Vegas &middot; Talk details to follow</span></span>
+      </li>
+      <li data-event-end="2027-11-18">
+        <span class="when">Nov 14–18, 2027</span>
+        <span class="what"><span class="name">RSNA 2027</span><br><span class="where">McCormick Place, Chicago &middot; Talk details to follow</span></span>
+      </li>
+      <li data-event-end="2027-12-31">
+        <span class="when">Dates TBA, 2027</span>
+        <span class="what"><span class="name">AWS re:Invent 2027</span><br><span class="where">Las Vegas &middot; Talk details to follow</span></span>
       </li>
     </ul>
 
@@ -506,7 +558,7 @@
           var li = document.createElement('li');
           li.setAttribute('data-event-end', c.getAttribute('data-event-end'));
           var when = document.createElement('span'); when.className = 'when';
-          when.textContent = txt('.event-month') + ' ' + txt('.event-day') + ', ' + year;
+          when.textContent = [txt('.event-month'), txt('.event-day')].filter(Boolean).join(' ') + ', ' + year;
           var what = document.createElement('span'); what.className = 'what';
           var name = document.createElement('span'); name.className = 'name'; name.textContent = txt('.event-name');
           var where = document.createElement('span'); where.className = 'where'; where.textContent = txt('.event-meta');
